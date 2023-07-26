@@ -48,6 +48,7 @@
               "$live/loaders/state.ts",
               "$live/loaders/workflows/events.ts",
               "$live/loaders/workflows/get.ts",
+              "deco-sites/leadfy-dealers/loaders/pdp.ts",
               "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts",
               "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts",
               "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts",
@@ -65,6 +66,7 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "./islands/Form.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -79,9 +81,12 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
-              "deco-sites/leadfy-dealers/sections/Hero.tsx",
-              "deco-sites/leadfy-dealers/sections/ParagraphList.tsx",
-              "deco-sites/leadfy-dealers/sections/SimpleTextList.tsx",
+              "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
+              "deco-sites/leadfy-dealers/sections/DealerList.tsx",
+              "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
+              "deco-sites/leadfy-dealers/sections/SectionList.tsx",
+              "deco-sites/leadfy-dealers/sections/StoresHome.tsx",
+              "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
               "deco-sites/leadfy-dealers/sections/Theme.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
@@ -3931,6 +3936,230 @@
       ],
       "title": "deco-cx/live/loaders/workflows/get.ts@Props"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@Vehicle": {
+      "type": "object",
+      "properties": {
+        "g:id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:id"
+        },
+        "g:title": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:title"
+        },
+        "g:description": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:description"
+        },
+        "g:link": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:link"
+        },
+        "g:image_link": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:image_link"
+        },
+        "g:additional_image_link": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:additional_image_link"
+        },
+        "g:brand": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:brand"
+        },
+        "g:color": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:color"
+        },
+        "g:condition": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:condition"
+        },
+        "g:price": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:price"
+        },
+        "g:size": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:size"
+        },
+        "g:availability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:availability"
+        },
+        "g:google_product_category": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "G:google_product_category"
+        },
+        "location_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Location_id"
+        }
+      },
+      "required": [
+        "g:id",
+        "g:title",
+        "g:description",
+        "g:link",
+        "g:image_link",
+        "g:additional_image_link",
+        "g:brand",
+        "g:color",
+        "g:condition",
+        "g:price",
+        "g:size",
+        "g:availability",
+        "g:google_product_category",
+        "location_id"
+      ],
+      "title": "Vehicle"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@Vehicle[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@Vehicle"
+      },
+      "title": "Vehicle[]"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@storeDataFromApi": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "logo": {
+          "type": "string",
+          "title": "Logo"
+        },
+        "whatsapp": {
+          "type": "string",
+          "title": "Whatsapp"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "logo",
+        "whatsapp"
+      ],
+      "title": "storeDataFromApi"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "idLoja": {
+              "type": "string",
+              "title": "Id Loja"
+            },
+            "result": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@Vehicle[]",
+              "title": "Result"
+            },
+            "storeDataFromApi": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@storeDataFromApi",
+              "title": "Store Data From Api"
+            }
+          },
+          "required": [
+            "idLoja",
+            "result",
+            "storeDataFromApi"
+          ],
+          "title": "deco-sites/leadfy-dealers/components/types.ts@PdpReturn"
+        },
+        {
+          "title": "deco-sites/leadfy-dealers/loaders/pdp.ts",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9sb2FkZXJzL3BkcC50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/leadfy-dealers/loaders/pdp.ts"
+              ],
+              "default": "deco-sites/leadfy-dealers/loaders/pdp.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9sb2FkZXJzL3BkcC50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "idloja": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "title": "Idloja"
+        },
+        "slug": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "title": "Slug"
+        }
+      },
+      "required": [
+        "idloja",
+        "slug"
+      ],
+      "title": "deco-sites/leadfy-dealers/loaders/pdp.ts@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy9udXZlbVNob3AvbnV2ZW1TaG9wUHJvZHVjdERldGFpbHNQYWdlLnRz@Props": {
       "type": "object",
       "properties": {
@@ -7703,157 +7932,209 @@
       "format": "image-uri",
       "title": "Image"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA==@Link": {
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Profile": {
       "type": "object",
       "properties": {
-        "title": {
+        "whatsappNumber": {
           "type": "string",
-          "title": "Title"
+          "title": "Whatsapp Number"
         },
-        "href": {
-          "type": "string",
-          "title": "Href"
-        }
-      },
-      "required": [
-        "title",
-        "href"
-      ],
-      "title": "{{{title}}} - {{{href}}}"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
         "logo": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
-        },
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title"
-        },
-        "headline": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "textarea",
-          "title": "Headline"
-        },
-        "links": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA==@Link"
-          },
-          "title": "Links"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/leadfy-dealers/sections/Hero.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA==@Paragraph": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "text": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
-          "title": "Text"
         }
       },
       "required": [
-        "title",
-        "text"
+        "whatsappNumber",
+        "logo"
       ],
-      "title": "{{{title}}}"
+      "title": "Profile"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Props": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA==@Paragraph"
-          },
-          "title": "Items"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/leadfy-dealers/sections/ParagraphList.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@Item": {
-      "type": "object",
-      "properties": {
-        "text": {
+        "idLoja": {
           "type": "string",
-          "title": "Text"
+          "description": "Store id on Leadfy pannel",
+          "title": "Id Loja"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "profile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Profile",
+          "title": "Profile"
+        },
+        "banner": {
+          "type": "object",
+          "properties": {
+            "image": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Image"
+            },
+            "altText": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt Text"
+            }
+          },
+          "required": [],
+          "title": "Banner"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "subtitle": {
+              "type": "string",
+              "title": "Subtitle"
+            },
+            "text": {
+              "type": "string",
+              "title": "Text"
+            }
+          },
+          "required": [
+            "title",
+            "subtitle",
+            "text"
+          ],
+          "title": "Content"
         }
       },
       "required": [
-        "text"
+        "idLoja",
+        "label",
+        "profile",
+        "content"
       ],
-      "title": "{{{text}}}"
+      "title": "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@SimpleText": {
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@Item"
-          },
-          "format": "textarea",
-          "title": "Items"
+        "sections": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
+          "title": "Sections"
         }
       },
       "required": [
-        "title",
-        "items"
+        "sections"
       ],
-      "title": "{{{title}}}"
+      "title": "deco-sites/leadfy-dealers/sections/DealerList.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=@Props": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@SimpleText"
-          },
-          "format": "textarea",
-          "title": "Items"
+        "sections": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
+          "title": "Sections"
         }
       },
-      "required": [],
-      "title": "deco-sites/leadfy-dealers/sections/SimpleTextList.tsx@Props"
+      "required": [
+        "sections"
+      ],
+      "title": "deco-sites/leadfy-dealers/sections/SectionList.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Profile": {
+      "type": "object",
+      "properties": {
+        "idLoja": {
+          "type": "string",
+          "description": "Store id on Leadfy pannel",
+          "title": "Id Loja"
+        }
+      },
+      "required": [
+        "idLoja"
+      ],
+      "title": "Profile"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "profile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Profile",
+          "title": "Profile"
+        },
+        "banner": {
+          "type": "object",
+          "properties": {
+            "image": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Image"
+            },
+            "altText": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt Text"
+            }
+          },
+          "required": [],
+          "title": "Banner"
+        }
+      },
+      "required": [
+        "label",
+        "profile"
+      ],
+      "title": "StoreInformations"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations"
+      },
+      "title": "StoreInformations[]"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "stores": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations[]",
+          "title": "Stores"
+        }
+      },
+      "required": [
+        "stores"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/StoresHome.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "PdpReturn|null"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn|null",
+          "title": "Page"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/StoresPdp.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9UaGVtZS50c3g=@MainColors": {
       "type": "object",
@@ -10355,6 +10636,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9sb2FkZXJzL3BkcC50cw==": {
+      "title": "deco-sites/leadfy-dealers/loaders/pdp.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9sb2FkZXJzL3BkcC50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/loaders/pdp.ts"
+          ],
+          "default": "deco-sites/leadfy-dealers/loaders/pdp.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy9udXZlbVNob3AvbnV2ZW1TaG9wUHJvZHVjdERldGFpbHNQYWdlLnRz": {
       "title": "NuvemShop - PDP",
       "type": "object",
@@ -10711,6 +11013,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Zvcm0udHN4": {
+      "title": "./islands/Form.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Form.tsx"
+          ],
+          "default": "./islands/Form.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -10999,12 +11317,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA==": {
-      "title": "deco-sites/leadfy-dealers/sections/Hero.tsx",
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJIb21lLnRzeA==": {
+      "title": "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Props"
         }
       ],
       "required": [
@@ -11014,18 +11332,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/leadfy-dealers/sections/Hero.tsx"
+            "deco-sites/leadfy-dealers/sections/DealerHome.tsx"
           ],
-          "default": "deco-sites/leadfy-dealers/sections/Hero.tsx"
+          "default": "deco-sites/leadfy-dealers/sections/DealerHome.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA==": {
-      "title": "deco-sites/leadfy-dealers/sections/ParagraphList.tsx",
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA==": {
+      "title": "deco-sites/leadfy-dealers/sections/DealerList.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA==@Props"
         }
       ],
       "required": [
@@ -11035,18 +11353,34 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/leadfy-dealers/sections/ParagraphList.tsx"
+            "deco-sites/leadfy-dealers/sections/DealerList.tsx"
           ],
-          "default": "deco-sites/leadfy-dealers/sections/ParagraphList.tsx"
+          "default": "deco-sites/leadfy-dealers/sections/DealerList.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=": {
-      "title": "deco-sites/leadfy-dealers/sections/SimpleTextList.tsx",
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9MZWFkZnlMb2dvLnRzeA==": {
+      "title": "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=": {
+      "title": "deco-sites/leadfy-dealers/sections/SectionList.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=@Props"
         }
       ],
       "required": [
@@ -11056,9 +11390,51 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/leadfy-dealers/sections/SimpleTextList.tsx"
+            "deco-sites/leadfy-dealers/sections/SectionList.tsx"
           ],
-          "default": "deco-sites/leadfy-dealers/sections/SimpleTextList.tsx"
+          "default": "deco-sites/leadfy-dealers/sections/SectionList.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNIb21lLnRzeA==": {
+      "title": "deco-sites/leadfy-dealers/sections/StoresHome.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/StoresHome.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/StoresHome.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNQZHAudHN4": {
+      "title": "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/StoresPdp.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/StoresPdp.tsx"
         }
       }
     },
@@ -12160,6 +12536,9 @@
           "$ref": "#/definitions/JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZ2V0LnRz"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9sb2FkZXJzL3BkcC50cw=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy9udXZlbVNob3AvbnV2ZW1TaG9wUHJvZHVjdERldGFpbHNQYWdlLnRz"
         },
         {
@@ -12218,7 +12597,14 @@
     },
     "islands": {
       "title": "islands",
-      "anyOf": []
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm0udHN4"
+        }
+      ]
     },
     "handlers": {
       "title": "handlers",
@@ -12285,13 +12671,22 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZXJvLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJIb21lLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9MZWFkZnlMb2dvLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNIb21lLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNQZHAudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9UaGVtZS50c3g="
