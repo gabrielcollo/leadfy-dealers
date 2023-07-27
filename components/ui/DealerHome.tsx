@@ -6,18 +6,16 @@ import type { SectionProps } from "$live/mod.ts";
 import { Head } from "$fresh/runtime.ts";
 
 import Gallery from "deco-sites/leadfy-dealers/components/ui/Gallery.tsx";
+import WhatsAppButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppButton.tsx";
 
-export interface Profile {
-  whatsappNumber: string;
-  logo: LiveImage;
-}
+import type { VehicleRss } from "deco-sites/leadfy-dealers/components/types.ts";
+import { Parser } from "xml2js";
 
 export interface Props {
   /** @title Id */
   /** @description Store id on Leadfy pannel */
   idLoja: string;
   label: string;
-  profile: Profile;
   banner?: {
     image?: LiveImage;
     altText?: string;
@@ -30,20 +28,20 @@ export interface Props {
 }
 
 export default function StoresHome(
-  { store, vehicles }: SectionProps<typeof loader>,
+  { store, vehicles, storeDataFromApi }: SectionProps<typeof loader>,
 ) {
   if (store) {
-    const { idLoja, profile, banner, content } = store;
+    const { idLoja, banner, content } = store;
     return (
       <>
         <Head>
           <title>{content.title}</title>
-          <link rel="icon" type="image/png" href={profile.logo}></link>
+          <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
         </Head>
         <div>
           <div class="container px-12 py-7 flex justify-center">
             <Image
-              src={profile.logo}
+              src={storeDataFromApi.logo}
               width={200}
               alt={content.title}
             />
@@ -70,9 +68,10 @@ export default function StoresHome(
           <Gallery
             vehicles={vehicles}
             idLoja={idLoja}
-            whatsapp={profile.whatsappNumber}
+            whatsapp={storeDataFromApi.whatsapp}
           />
         </div>
+        <WhatsAppButton whatsapp={storeDataFromApi.whatsapp} />
       </>
     );
   }
@@ -91,9 +90,24 @@ export const loader = async (
   req: Request,
 ) => {
   const response = await fetch(
-    `https://autogestor-dealers.s3.us-west-2.amazonaws.com/${store.idLoja}/portals/dealersites/vehicles.json`,
+    `https://s3.agsistema.net/${store.idLoja}/portals/c7power/vehicles.xml`,
   );
-  const vehicles = await response.json();
 
-  return { store, vehicles };
+  const text = await response.text();
+
+  const parser = new Parser();
+  const json: VehicleRss = await parser.parseStringPromise(text);
+
+  const vehicles = json.rss.channel[0].item;
+
+  const storeDataFromApi = {
+    title: json.rss.channel[0].title[0],
+    description: json.rss.channel[0].description[0],
+    logo: json.rss.channel[0].logo[0],
+    whatsapp:
+      json.rss.channel[0].locations[0].location[0].whatsapps[0].whatsapp[0]
+        .number[0],
+  };
+
+  return { store, vehicles, storeDataFromApi };
 };

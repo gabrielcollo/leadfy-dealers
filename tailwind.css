@@ -42,4 +42,27 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  .container{
+    width: 100%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .louis-bold{
+    font-family: "Louis Bold", "sans-serif" !important;
+  }
+
+  .shadow{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  }
+
+  .line-clamp-2{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
 }

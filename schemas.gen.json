@@ -7932,24 +7932,6 @@
       "format": "image-uri",
       "title": "Image"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Profile": {
-      "type": "object",
-      "properties": {
-        "whatsappNumber": {
-          "type": "string",
-          "title": "Whatsapp Number"
-        },
-        "logo": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Logo"
-        }
-      },
-      "required": [
-        "whatsappNumber",
-        "logo"
-      ],
-      "title": "Profile"
-    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Props": {
       "type": "object",
       "properties": {
@@ -7961,10 +7943,6 @@
         "label": {
           "type": "string",
           "title": "Label"
-        },
-        "profile": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Profile",
-          "title": "Profile"
         },
         "banner": {
           "type": "object",
@@ -8011,7 +7989,6 @@
       "required": [
         "idLoja",
         "label",
-        "profile",
         "content"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx@Props"

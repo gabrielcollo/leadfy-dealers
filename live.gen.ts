@@ -4,17 +4,17 @@
 
 import { DecoManifest } from "$live/types.ts";
 import * as $$$0 from "./loaders/pdp.ts";
-import * as $$$$0 from "./routes/styles.css.ts";
-import * as $$$$1 from "./routes/api/airtable.ts";
+import * as $$$$0 from "./routes/api/airtable.ts";
+import * as $$$$1 from "./routes/styles.css.ts";
 import * as $$$$2 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Form.tsx";
 import * as $$$$$$$$0 from "./sections/DealerHome.tsx";
 import * as $$$$$$$$1 from "./sections/DealerList.tsx";
-import * as $$$$$$$$2 from "./sections/SectionList.tsx";
-import * as $$$$$$$$3 from "./sections/LeadfyLogo.tsx";
-import * as $$$$$$$$4 from "./sections/Theme.tsx";
-import * as $$$$$$$$5 from "./sections/StoresHome.tsx";
-import * as $$$$$$$$6 from "./sections/StoresPdp.tsx";
+import * as $$$$$$$$2 from "./sections/LeadfyLogo.tsx";
+import * as $$$$$$$$3 from "./sections/SectionList.tsx";
+import * as $$$$$$$$4 from "./sections/StoresHome.tsx";
+import * as $$$$$$$$5 from "./sections/StoresPdp.tsx";
+import * as $$$$$$$$6 from "./sections/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -170,7 +170,7 @@ const manifest = {
     "./routes/_app.tsx": $$$$2,
     "./routes/_middleware.ts": $live_middleware,
     "./routes/[...catchall].tsx": $live_catchall,
-    "./routes/api/airtable.ts": $$$$1,
+    "./routes/api/airtable.ts": $$$$0,
     "./routes/index.tsx": $live_catchall,
     "./routes/live/_meta.ts": $live_meta,
     "./routes/live/editorData.ts": $live_editorData,
@@ -182,7 +182,7 @@ const manifest = {
     "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
     "./routes/live/workflows/run.ts": $live_workflows,
-    "./routes/styles.css.ts": $$$$0,
+    "./routes/styles.css.ts": $$$$1,
   },
   "islands": {
     "./islands/Form.tsx": $$$$$0,
@@ -195,11 +195,11 @@ const manifest = {
     "$live/sections/UseSlot.tsx": i2$$$$$4,
     "deco-sites/leadfy-dealers/sections/DealerHome.tsx": $$$$$$$$0,
     "deco-sites/leadfy-dealers/sections/DealerList.tsx": $$$$$$$$1,
-    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$$$3,
-    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$$$2,
-    "deco-sites/leadfy-dealers/sections/StoresHome.tsx": $$$$$$$$5,
-    "deco-sites/leadfy-dealers/sections/StoresPdp.tsx": $$$$$$$$6,
-    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$$$4,
+    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$$$2,
+    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$$$3,
+    "deco-sites/leadfy-dealers/sections/StoresHome.tsx": $$$$$$$$4,
+    "deco-sites/leadfy-dealers/sections/StoresPdp.tsx": $$$$$$$$5,
+    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$$$6,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
