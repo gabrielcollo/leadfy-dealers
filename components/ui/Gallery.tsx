@@ -1,6 +1,9 @@
 import Image from "deco-sites/std/components/Image.tsx";
 
-import { formatPrice } from "deco-sites/leadfy-dealers/sdk/format.ts";
+import {
+  clearWhatsApp,
+  formatPrice,
+} from "deco-sites/leadfy-dealers/sdk/format.ts";
 
 import type {
   Vehicle,
@@ -67,7 +70,9 @@ export function ProductCard(
             Tenho interesse
           </a>
           <a
-            href={`https://api.whatsapp.com/send/?phone=${whatsapp}&text&type=phone_number&app_absent=0`}
+            href={`https://api.whatsapp.com/send/?phone=${
+              clearWhatsApp(whatsapp)
+            }&text&type=phone_number&app_absent=0`}
             target="_blank"
             class="bg-[#25d366] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
           >

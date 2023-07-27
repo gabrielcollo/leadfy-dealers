@@ -14,3 +14,8 @@ export const formatPrice = (
 
   return formatter.format(price);
 };
+
+export const clearWhatsApp = (whatsapp: string) => {
+  return whatsapp.replaceAll(" ", "").replaceAll(")", "").replaceAll("(", "")
+    .replaceAll("-", "");
+};

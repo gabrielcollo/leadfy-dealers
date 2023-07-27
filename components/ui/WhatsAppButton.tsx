@@ -1,6 +1,8 @@
 import { useSignal } from "@preact/signals";
 import Image from "deco-sites/std/components/Image.tsx";
 
+import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
+
 export default function WhatsAppButton(
   { whatsapp, logo, idLoja }: {
     whatsapp: string;
@@ -39,7 +41,9 @@ export default function WhatsAppButton(
       .then((response) => {
         if (response.status == 200) {
           window.open(
-            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de saber mais sobre os seus serviços! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value} %0D%0A Email: ${email.value}&phone=${whatsapp}`,
+            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de saber mais sobre os seus serviços! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value} %0D%0A Email: ${email.value}&phone=${
+              clearWhatsApp(whatsapp)
+            }`,
             "_self",
           );
         }
@@ -75,9 +79,9 @@ export default function WhatsAppButton(
         </button>
 
         <div
-          class={`form-wpp transition-all w-[350px] shadow rounded ${
+          class={`form-wpp fixed bottom-[100px] sm:bottom-0 left-[calc(50%-175px)] sm:left-0 transition-all w-[350px] shadow rounded ${
             open.value ? "block" : "hidden"
-          }`}
+          } sm:relative`}
         >
           <div class="head-wpp bg-[#0c6156] flex items-center justify-between p-4">
             <div class="flex gap-2 items-center">
