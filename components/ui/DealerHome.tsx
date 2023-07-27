@@ -6,7 +6,7 @@ import type { SectionProps } from "$live/mod.ts";
 import { Head } from "$fresh/runtime.ts";
 
 import Gallery from "deco-sites/leadfy-dealers/components/ui/Gallery.tsx";
-import WhatsAppButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppButton.tsx";
+import WhatsAppButton from "deco-sites/leadfy-dealers/islands/WhatsAppButton.tsx";
 
 import type { VehicleRss } from "deco-sites/leadfy-dealers/components/types.ts";
 import { Parser } from "xml2js";
@@ -71,7 +71,11 @@ export default function StoresHome(
             whatsapp={storeDataFromApi.whatsapp}
           />
         </div>
-        <WhatsAppButton whatsapp={storeDataFromApi.whatsapp} />
+        <WhatsAppButton
+          whatsapp={storeDataFromApi.whatsapp}
+          logo={storeDataFromApi.logo}
+          idLoja={idLoja}
+        />
       </>
     );
   }

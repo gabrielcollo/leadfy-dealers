@@ -3,7 +3,7 @@ import type { LoaderReturnType } from "$live/types.ts";
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
-import WhatsAppButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppButton.tsx";
+import WhatsAppButton from "deco-sites/leadfy-dealers/islands/WhatsAppButton.tsx";
 import Image from "deco-sites/std/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
@@ -15,7 +15,7 @@ export interface Props {
 export default function StoresPdp({ page }: Props) {
   if (page) {
     const vehicle = page.result[0];
-    const { storeDataFromApi } = page;
+    const { storeDataFromApi, idLoja } = page;
     return (
       <>
         <Head>
@@ -24,7 +24,7 @@ export default function StoresPdp({ page }: Props) {
         </Head>
         <div>
           <div class="container px-12 py-7 flex justify-center">
-            <a href={`/${page.idLoja}`}>
+            <a href={`/${idLoja}`}>
               <Image
                 src={storeDataFromApi.logo}
                 width={200}
@@ -53,11 +53,15 @@ export default function StoresPdp({ page }: Props) {
               })}
             </div>
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-10 sticky top-0 self-start">
-              <Form vehicle={vehicle} idLoja={page.idLoja} />
+              <Form vehicle={vehicle} idLoja={idLoja} />
             </div>
           </div>
         </div>
-        <WhatsAppButton whatsapp={storeDataFromApi.whatsapp} />
+        <WhatsAppButton
+          whatsapp={storeDataFromApi.whatsapp}
+          logo={storeDataFromApi.logo}
+          idLoja={idLoja}
+        />
       </>
     );
   }

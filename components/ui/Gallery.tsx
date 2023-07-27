@@ -62,14 +62,14 @@ export function ProductCard(
             href={`/${idLoja}/${
               vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
             }`}
-            class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center"
+            class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
           >
             Tenho interesse
           </a>
           <a
             href={`https://api.whatsapp.com/send/?phone=${whatsapp}&text&type=phone_number&app_absent=0`}
             target="_blank"
-            class="bg-[#25d366] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center"
+            class="bg-[#25d366] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
           >
             Negociar pelo Whatsapp
           </a>

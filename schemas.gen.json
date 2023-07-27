@@ -67,6 +67,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/Form.tsx",
+              "./islands/WhatsAppButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -85,7 +86,6 @@
               "deco-sites/leadfy-dealers/sections/DealerList.tsx",
               "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
               "deco-sites/leadfy-dealers/sections/SectionList.tsx",
-              "deco-sites/leadfy-dealers/sections/StoresHome.tsx",
               "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
               "deco-sites/leadfy-dealers/sections/Theme.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -8019,76 +8019,6 @@
       ],
       "title": "deco-sites/leadfy-dealers/sections/SectionList.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Profile": {
-      "type": "object",
-      "properties": {
-        "idLoja": {
-          "type": "string",
-          "description": "Store id on Leadfy pannel",
-          "title": "Id Loja"
-        }
-      },
-      "required": [
-        "idLoja"
-      ],
-      "title": "Profile"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "title": "Label"
-        },
-        "profile": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Profile",
-          "title": "Profile"
-        },
-        "banner": {
-          "type": "object",
-          "properties": {
-            "image": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-              "title": "Image"
-            },
-            "altText": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt Text"
-            }
-          },
-          "required": [],
-          "title": "Banner"
-        }
-      },
-      "required": [
-        "label",
-        "profile"
-      ],
-      "title": "StoreInformations"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations"
-      },
-      "title": "StoreInformations[]"
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Props": {
-      "type": "object",
-      "properties": {
-        "stores": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@StoreInformations[]",
-          "title": "Stores"
-        }
-      },
-      "required": [
-        "stores"
-      ],
-      "title": "deco-sites/leadfy-dealers/components/ui/StoresHome.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn|null": {
       "anyOf": [
         {
@@ -11006,6 +10936,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA==": {
+      "title": "./islands/WhatsAppButton.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/WhatsAppButton.tsx"
+          ],
+          "default": "./islands/WhatsAppButton.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -11370,27 +11316,6 @@
             "deco-sites/leadfy-dealers/sections/SectionList.tsx"
           ],
           "default": "deco-sites/leadfy-dealers/sections/SectionList.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNIb21lLnRzeA==": {
-      "title": "deco-sites/leadfy-dealers/sections/StoresHome.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc0hvbWUudHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/leadfy-dealers/sections/StoresHome.tsx"
-          ],
-          "default": "deco-sites/leadfy-dealers/sections/StoresHome.tsx"
         }
       }
     },
@@ -12580,6 +12505,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm0udHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA=="
         }
       ]
     },
@@ -12658,9 +12586,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNIb21lLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TdG9yZXNQZHAudHN4"
