@@ -39,23 +39,6 @@ export default function StoresHome(
           <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
         </Head>
         <div>
-          <div class="container px-12 py-7 flex justify-center">
-            <Image
-              src={storeDataFromApi.logo}
-              width={200}
-              alt={content.title}
-            />
-          </div>
-          {banner && banner.image && (
-            <div class="container">
-              <Image
-                src={banner.image}
-                width={1100}
-                class="w-full"
-                alt={banner.altText || content.title}
-              />
-            </div>
-          )}
           <div class="container text-center">
             <h1 class="text-[44px] my-3 louis-bold text-black">
               {content.title}

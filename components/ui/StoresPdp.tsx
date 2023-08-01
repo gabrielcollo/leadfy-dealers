@@ -23,15 +23,6 @@ export default function StoresPdp({ page }: Props) {
           <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
         </Head>
         <div>
-          <div class="container px-12 py-7 flex justify-center">
-            <a href={`/${idLoja}`}>
-              <Image
-                src={storeDataFromApi.logo}
-                width={200}
-                alt={storeDataFromApi.title}
-              />
-            </a>
-          </div>
           <div class="container flex flex-col sm:flex-row">
             <div
               class={`w-full sm:w-1/2 px-5 pt-5 sm:px-0 flex gap-3 sm:flex-wrap sm:pt-10 overflow-auto scrollbar-none ${

@@ -82,6 +82,7 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/leadfy-dealers/sections/Banner.tsx",
               "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
               "deco-sites/leadfy-dealers/sections/DealerList.tsx",
               "deco-sites/leadfy-dealers/sections/Header.tsx",
@@ -7933,6 +7934,29 @@
       "format": "image-uri",
       "title": "Image"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Jhbm5lci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "bannerDesktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Banner Desktop"
+        },
+        "bannerMobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Banner Mobile"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "bannerDesktop",
+        "bannerMobile",
+        "alt"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/Banner.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Props": {
       "type": "object",
       "properties": {
@@ -11259,6 +11283,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9CYW5uZXIudHN4": {
+      "title": "deco-sites/leadfy-dealers/sections/Banner.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Jhbm5lci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/Banner.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/Banner.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJIb21lLnRzeA==": {
       "title": "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
       "type": "object",
@@ -12614,6 +12659,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9CYW5uZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJIb21lLnRzeA=="
