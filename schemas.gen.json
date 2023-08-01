@@ -87,6 +87,7 @@
               "deco-sites/leadfy-dealers/sections/DealerList.tsx",
               "deco-sites/leadfy-dealers/sections/Header.tsx",
               "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
+              "deco-sites/leadfy-dealers/sections/RichText.tsx",
               "deco-sites/leadfy-dealers/sections/SectionList.tsx",
               "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
               "deco-sites/leadfy-dealers/sections/Theme.tsx",
@@ -7969,52 +7970,16 @@
           "type": "string",
           "title": "Label"
         },
-        "banner": {
-          "type": "object",
-          "properties": {
-            "image": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-              "title": "Image"
-            },
-            "altText": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt Text"
-            }
-          },
-          "required": [],
-          "title": "Banner"
-        },
-        "content": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "title": "Title"
-            },
-            "subtitle": {
-              "type": "string",
-              "title": "Subtitle"
-            },
-            "text": {
-              "type": "string",
-              "title": "Text"
-            }
-          },
-          "required": [
-            "title",
-            "subtitle",
-            "text"
-          ],
-          "title": "Content"
+        "title": {
+          "type": "string",
+          "description": "SEO Title",
+          "title": "Title"
         }
       },
       "required": [
         "idLoja",
         "label",
-        "content"
+        "title"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx@Props"
     },
@@ -8048,6 +8013,31 @@
         "alt"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML"
+      },
+      "title": "HTML[]"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1JpY2hUZXh0LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/RichText.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=@Props": {
       "type": "object",
@@ -11383,6 +11373,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9SaWNoVGV4dC50c3g=": {
+      "title": "deco-sites/leadfy-dealers/sections/RichText.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1JpY2hUZXh0LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/RichText.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/RichText.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=": {
       "title": "deco-sites/leadfy-dealers/sections/SectionList.tsx",
       "type": "object",
@@ -12674,6 +12685,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9MZWFkZnlMb2dvLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9SaWNoVGV4dC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g="

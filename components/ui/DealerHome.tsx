@@ -16,38 +16,22 @@ export interface Props {
   /** @description Store id on Leadfy pannel */
   idLoja: string;
   label: string;
-  banner?: {
-    image?: LiveImage;
-    altText?: string;
-  };
-  content: {
-    title: string;
-    subtitle: string;
-    text: string;
-  };
+  /** @description SEO Title */
+  title: string;
 }
 
 export default function StoresHome(
   { store, vehicles, storeDataFromApi }: SectionProps<typeof loader>,
 ) {
   if (store) {
-    const { idLoja, banner, content } = store;
+    const { idLoja, title } = store;
     return (
       <>
         <Head>
-          <title>{content.title}</title>
+          <title>{title}</title>
           <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
         </Head>
         <div>
-          <div class="container text-center">
-            <h1 class="text-[44px] my-3 louis-bold text-black">
-              {content.title}
-            </h1>
-            <h2 class="text-[30px]">{content.subtitle}</h2>
-            <p class="text-[20px] louis-bold text-[#1a1b1f] opacity-60">
-              {content.text}
-            </p>
-          </div>
           <Gallery
             vehicles={vehicles}
             idLoja={idLoja}
@@ -88,8 +72,6 @@ export const loader = async (
   const vehicles = json.rss.channel[0].item;
 
   const storeDataFromApi = {
-    title: json.rss.channel[0].title[0],
-    description: json.rss.channel[0].description[0],
     logo: json.rss.channel[0].logo[0],
     whatsapp:
       json.rss.channel[0].locations[0].location[0].whatsapps[0].whatsapp[0]
