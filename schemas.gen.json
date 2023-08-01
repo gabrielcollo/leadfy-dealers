@@ -84,6 +84,7 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
               "deco-sites/leadfy-dealers/sections/DealerList.tsx",
+              "deco-sites/leadfy-dealers/sections/Header.tsx",
               "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
               "deco-sites/leadfy-dealers/sections/SectionList.tsx",
               "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
@@ -8006,6 +8007,24 @@
       ],
       "title": "deco-sites/leadfy-dealers/sections/DealerList.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Logo"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "logo",
+        "alt"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/Header.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9TZWN0aW9uTGlzdC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -11282,6 +11301,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZWFkZXIudHN4": {
+      "title": "deco-sites/leadfy-dealers/sections/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/Header.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/Header.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9MZWFkZnlMb2dvLnRzeA==": {
       "title": "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
       "type": "object",
@@ -12580,6 +12620,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZWFkZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9MZWFkZnlMb2dvLnRzeA=="
