@@ -14,7 +14,6 @@ export default function WhatsAppButton(
 
   const nome = useSignal("");
   const telefone = useSignal("");
-  const email = useSignal("");
 
   function saveLead() {
     const data = {
@@ -23,7 +22,6 @@ export default function WhatsAppButton(
           "fields": {
             "Nome": nome.value,
             "Telefone": telefone.value,
-            "Email": email.value,
           },
         },
       ],
@@ -41,7 +39,7 @@ export default function WhatsAppButton(
       .then((response) => {
         if (response.status == 200) {
           window.open(
-            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de saber mais sobre os seus serviços! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value} %0D%0A Email: ${email.value}&phone=${
+            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de saber mais sobre os seus serviços! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value}&phone=${
               clearWhatsApp(whatsapp)
             }`,
             "_self",
@@ -160,22 +158,6 @@ export default function WhatsAppButton(
                     value={telefone.value}
                     onChange={(e) =>
                       telefone.value = (e.target as HTMLInputElement)?.value}
-                  />
-                </span>
-              </div>
-              <div class="campo w-5/6">
-                <label for="email" class="hidden">Email</label>
-                <span class="form-control-wrap">
-                  <input
-                    type="email"
-                    name="email"
-                    aria-required="true"
-                    placeholder="E-mail"
-                    required
-                    class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
-                    value={email.value}
-                    onChange={(e) =>
-                      email.value = (e.target as HTMLInputElement)?.value}
                   />
                 </span>
               </div>

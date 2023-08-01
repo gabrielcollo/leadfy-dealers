@@ -9,11 +9,13 @@ export interface Props {
 export default function Header({ logo, alt }: Props) {
   return (
     <div class="container px-12 py-7 flex justify-center">
-      <Image
-        src={logo}
-        width={200}
-        alt={alt}
-      />
+      <a href="/">
+        <Image
+          src={logo}
+          width={200}
+          alt={alt}
+        />
+      </a>
     </div>
   );
 }
