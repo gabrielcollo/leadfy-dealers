@@ -53,12 +53,18 @@ export function ProductCard(
         {vehicle["g:description"][0]}
       </span>
       <div class="px-0 sm:px-8">
-        <div class="sm:min-h-[320px]">
+        <a
+          href={`/${idLoja}/${
+            vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
+          }`}
+          class="sm:min-h-[320px]"
+        >
           <Image
             src={vehicle["g:image_link"][0]}
             width={516}
+            class="hover:scale-[1.05] cursor-pointer transition-all duration-300"
           />
-        </div>
+        </a>
 
         <div class="flex flex-col gap-3 py-3">
           <a
