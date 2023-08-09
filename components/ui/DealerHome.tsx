@@ -18,10 +18,12 @@ export interface Props {
   label: string;
   /** @description SEO Title */
   title: string;
+  /** @description Phone Number */
+  phone?: string;
 }
 
 export default function StoresHome(
-  { store, vehicles, storeDataFromApi }: SectionProps<typeof loader>,
+  { store, vehicles, storeDataFromApi, phone }: SectionProps<typeof loader>,
 ) {
   if (store) {
     const { idLoja, title } = store;
@@ -35,7 +37,7 @@ export default function StoresHome(
           <Gallery
             vehicles={vehicles}
             idLoja={idLoja}
-            whatsapp={storeDataFromApi.whatsapp}
+            phone={phone}
           />
         </div>
         <WhatsAppButton
@@ -78,5 +80,5 @@ export const loader = async (
         .number[0],
   };
 
-  return { store, vehicles, storeDataFromApi };
+  return { store, vehicles, storeDataFromApi, phone: store.phone };
 };

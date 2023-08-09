@@ -5,27 +5,29 @@ import {
   formatPrice,
 } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
+import CallNowButton from "deco-sites/leadfy-dealers/components/ui/CallNowButton.tsx";
+
 import type {
   Vehicle,
   Vehicles,
 } from "deco-sites/leadfy-dealers/components/types.ts";
 
 export default function Gallery(
-  { vehicles, idLoja, whatsapp }: {
+  { vehicles, idLoja, phone }: {
     vehicles: Vehicles;
     idLoja: string;
-    whatsapp: string;
+    phone?: string;
   },
 ) {
   return (
     <div class="pt-5">
-      <div class="container flex flex-wrap gap-2 px-5 sm:px-0 py-5">
+      <div class="container flex justify-center flex-wrap gap-2 px-5 sm:px-0 py-5">
         {vehicles.map((vehicle: Vehicle) => {
           return (
             <ProductCard
               vehicle={vehicle}
               idLoja={idLoja}
-              whatsapp={whatsapp}
+              phone={phone}
             />
           );
         })}
@@ -35,10 +37,10 @@ export default function Gallery(
 }
 
 export function ProductCard(
-  { vehicle, idLoja, whatsapp }: {
+  { vehicle, idLoja, phone }: {
     vehicle: Vehicle;
     idLoja: string;
-    whatsapp: string;
+    phone?: string;
   },
 ) {
   return (
@@ -75,15 +77,7 @@ export function ProductCard(
           >
             Tenho interesse
           </a>
-          <a
-            href={`https://api.whatsapp.com/send/?phone=${
-              clearWhatsApp(whatsapp)
-            }&text&type=phone_number&app_absent=0`}
-            target="_blank"
-            class="bg-[#25d366] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
-          >
-            Negociar pelo Whatsapp
-          </a>
+          {phone && <CallNowButton phone={phone} />}
         </div>
       </div>
     </div>

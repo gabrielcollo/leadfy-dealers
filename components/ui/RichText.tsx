@@ -5,7 +5,7 @@ export interface Props {
   content: HTML[];
 }
 
-export default function TextInstitutional({ content }: Props) {
+export default function RichText({ content }: Props) {
   return (
     <div class="container text-center">
       <div>

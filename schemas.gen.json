@@ -67,6 +67,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/Form.tsx",
+              "./islands/SliderJS.tsx",
               "./islands/WhatsAppButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -85,6 +86,7 @@
               "deco-sites/leadfy-dealers/sections/Banner.tsx",
               "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
               "deco-sites/leadfy-dealers/sections/DealerList.tsx",
+              "deco-sites/leadfy-dealers/sections/Footer.tsx",
               "deco-sites/leadfy-dealers/sections/Header.tsx",
               "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx",
               "deco-sites/leadfy-dealers/sections/RichText.tsx",
@@ -7547,6 +7549,49 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1NsaWRlckpTLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "rootId": {
+          "type": "string",
+          "title": "Root Id"
+        },
+        "scroll": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "smooth",
+              "default": "smooth"
+            },
+            {
+              "type": "string",
+              "const": "auto",
+              "default": "auto"
+            }
+          ],
+          "type": "string",
+          "title": "Scroll"
+        },
+        "interval": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Interval"
+        },
+        "infinite": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Infinite"
+        }
+      },
+      "required": [
+        "rootId"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/SliderJS.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
       "properties": {
@@ -7974,6 +8019,14 @@
           "type": "string",
           "description": "SEO Title",
           "title": "Title"
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Phone Number",
+          "title": "Phone"
         }
       },
       "required": [
@@ -7996,6 +8049,37 @@
       ],
       "title": "deco-sites/leadfy-dealers/sections/DealerList.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML"
+      },
+      "title": "HTML[]"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]",
+          "title": "Content"
+        },
+        "interval": {
+          "type": "number",
+          "const": 0,
+          "default": 0,
+          "title": "Interval"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "deco-sites/leadfy-dealers/components/ui/Footer.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8013,18 +8097,6 @@
         "alt"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Header.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML"
-      },
-      "title": "HTML[]"
     },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1JpY2hUZXh0LnRzeA==@Props": {
       "type": "object",
@@ -8066,6 +8138,13 @@
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@Props": {
       "type": "object",
       "properties": {
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Phone"
+        },
         "page": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn|null",
           "title": "Page"
@@ -10969,6 +11048,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1NsaWRlckpTLnRzeA==": {
+      "title": "./islands/SliderJS.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1NsaWRlckpTLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/SliderJS.tsx"
+          ],
+          "default": "./islands/SliderJS.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA==": {
       "title": "./islands/WhatsAppButton.tsx",
       "type": "object",
@@ -11333,6 +11433,27 @@
             "deco-sites/leadfy-dealers/sections/DealerList.tsx"
           ],
           "default": "deco-sites/leadfy-dealers/sections/DealerList.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9Gb290ZXIudHN4": {
+      "title": "deco-sites/leadfy-dealers/sections/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/leadfy-dealers/sections/Footer.tsx"
+          ],
+          "default": "deco-sites/leadfy-dealers/sections/Footer.tsx"
         }
       }
     },
@@ -12603,6 +12724,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm0udHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1NsaWRlckpTLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA=="
         }
       ]
@@ -12679,6 +12803,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9EZWFsZXJMaXN0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9Gb290ZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9zZWN0aW9ucy9IZWFkZXIudHN4"

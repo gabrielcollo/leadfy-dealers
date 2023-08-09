@@ -9,10 +9,11 @@ import Image from "deco-sites/std/components/Image.tsx";
 import { Head } from "$fresh/runtime.ts";
 
 export interface Props {
+  phone?: string;
   page: LoaderReturnType<PdpReturn | null>;
 }
 
-export default function StoresPdp({ page }: Props) {
+export default function StoresPdp({ page, phone }: Props) {
   if (page) {
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
@@ -44,7 +45,7 @@ export default function StoresPdp({ page }: Props) {
               })}
             </div>
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-10 sticky top-0 self-start">
-              <Form vehicle={vehicle} idLoja={idLoja} />
+              <Form vehicle={vehicle} idLoja={idLoja} phone={phone} />
             </div>
           </div>
         </div>

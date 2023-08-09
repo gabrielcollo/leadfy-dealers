@@ -4,24 +4,26 @@ import { useSignal } from "@preact/signals";
 
 import { formatPrice } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
+import CallNowButton from "deco-sites/leadfy-dealers/components/ui/CallNowButton.tsx";
+
 export default function Form(
-  { vehicle, idLoja }: { vehicle: Vehicle; idLoja: string },
+  { vehicle, idLoja, phone }: {
+    vehicle: Vehicle;
+    idLoja: string;
+    phone?: string;
+  },
 ) {
   const nome = useSignal("");
-  const sobrenome = useSignal("");
   const telefone = useSignal("");
   const email = useSignal("");
-  const CPF = useSignal("");
 
   const buttonText = useSignal("Tenho interesse");
   const buttonDisabled = useSignal(false);
 
   function clearFields() {
     nome.value = "";
-    sobrenome.value = "";
     telefone.value = "";
     email.value = "";
-    CPF.value = "";
   }
 
   function saveLead() {
@@ -30,10 +32,8 @@ export default function Form(
         {
           "fields": {
             "Nome": nome.value,
-            "Sobrenome": sobrenome.value,
             "Telefone": telefone.value,
             "Email": email.value,
-            "CPF": CPF.value,
             "Carro": vehicle["g:title"][0],
           },
         },
@@ -67,7 +67,14 @@ export default function Form(
       <h1 class="text-[34px] text-black louis-bold">
         {vehicle["g:title"][0].toUpperCase()}
       </h1>
-      <span class="text-[22px] text-[#d1ad57]">
+      <div>
+        <p
+          class="text-[20px]"
+          dangerouslySetInnerHTML={{ __html: vehicle["g:description"][0] }}
+        >
+        </p>
+      </div>
+      <span class="text-[32px] font-bold text-[#d1ad57]">
         {formatPrice(Number(vehicle["g:price"][0]))}
       </span>
 
@@ -82,14 +89,6 @@ export default function Form(
           value={nome.value}
           changeState={(value) => {
             nome.value = value;
-          }}
-        />
-        <Input
-          label={"Sobrenome"}
-          placeholder={"Seu Sobrenome aqui"}
-          value={sobrenome.value}
-          changeState={(value) => {
-            sobrenome.value = value;
           }}
         />
         <Input
@@ -108,14 +107,6 @@ export default function Form(
             email.value = value;
           }}
         />
-        <Input
-          label={"CPF"}
-          placeholder={"Seu CPF aqui"}
-          value={CPF.value}
-          changeState={(value) => {
-            CPF.value = value;
-          }}
-        />
         <button
           class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center"
           onClick={() => saveLead()}
@@ -123,14 +114,8 @@ export default function Form(
         >
           {buttonText.value}
         </button>
+        {phone && <CallNowButton phone={phone} />}
       </form>
-      <div>
-        <p
-          class="text-[20px]"
-          dangerouslySetInnerHTML={{ __html: vehicle["g:description"][0] }}
-        >
-        </p>
-      </div>
     </div>
   );
 }
