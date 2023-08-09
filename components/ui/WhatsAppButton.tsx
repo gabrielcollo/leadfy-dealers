@@ -50,7 +50,7 @@ export default function WhatsAppButton(
 
   return (
     <>
-      <div id="wpp-fix" class="fixed bottom-8 right-8 z-12">
+      <div id="wpp-fix" class="fixed bottom-8 right-8 z-20">
         <button
           id="wpp-link"
           class={`wpp-form wpp-link transition-all bg-[#25D366] p-4 flex items-center justify-center rounded-full shadow-md ${

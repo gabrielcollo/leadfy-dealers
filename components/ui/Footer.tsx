@@ -18,77 +18,51 @@ export default function Footer({ content, interval }: Props) {
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
+      class="relative grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] py-12 max-w-[1280px] mx-auto"
     >
-      <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
-        {content?.map((content, index) => (
-          <Slider.Item index={index} class="carousel-item w-full">
-            <Quilltext html={content} />
+      <Slider
+        class={`carousel carousel-center w-full col-span-full row-span-full ${
+          content.length < 5 ? "sm:justify-center" : ""
+        }`}
+      >
+        {content?.map((text, index) => (
+          <Slider.Item
+            index={index}
+            class="carousel-item justify-center w-full sm:w-[256px]"
+          >
+            <Quilltext html={text} />
           </Slider.Item>
         ))}
       </Slider>
 
-      <Buttons />
-
-      <Dots content={content} interval={interval} />
-
+      <div class={`block ${content.length <= 5 ? "sm:hidden" : ""}`}>
+        <Buttons />
+      </div>
       <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
-  );
-}
-
-function Dots({ content, interval = 0 }: Props) {
-  return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @property --dot-progress {
-            syntax: '<percentage>';
-            inherits: false;
-            initial-value: 0%;
-          }
-          `,
-        }}
-      />
-      <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4">
-        {content?.map((_, index) => (
-          <li class="carousel-item">
-            <Slider.Dot index={index}>
-              <div class="py-5">
-                <div
-                  class="w-16 sm:w-20 h-0.5 rounded group-disabled:animate-progress bg-gradient-to-r from-base-100 from-[length:var(--dot-progress)] to-[rgba(255,255,255,0.4)] to-[length:var(--dot-progress)]"
-                  style={{ animationDuration: `${interval}s` }}
-                />
-              </div>
-            </Slider.Dot>
-          </li>
-        ))}
-      </ul>
-    </>
   );
 }
 
 function Buttons() {
   return (
     <>
-      <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="btn btn-circle glass">
+      <div class="flex items-center justify-center z-10 absolute left-4 sm:left-[-16px] top-1/2">
+        <Slider.PrevButton>
           <Icon
-            class="text-base-100"
-            size={24}
+            class="text-[black]"
+            size={16}
             id="ChevronLeft"
-            strokeWidth={3}
+            strokeWidth={2}
           />
         </Slider.PrevButton>
       </div>
-      <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="btn btn-circle glass">
+      <div class="flex items-center justify-center z-10 absolute right-4 sm:right-[-16px] top-1/2">
+        <Slider.NextButton>
           <Icon
-            class="text-base-100"
-            size={24}
+            class="text-[black]"
+            size={16}
             id="ChevronRight"
-            strokeWidth={3}
+            strokeWidth={2}
           />
         </Slider.NextButton>
       </div>

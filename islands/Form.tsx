@@ -139,6 +139,7 @@ function Input(
         name={label}
         id={label}
         placeholder={placeholder}
+        required={true}
         onChange={(e) => {
           changeState((e.target as HTMLInputElement)?.value);
         }}
