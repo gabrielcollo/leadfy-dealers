@@ -8105,6 +8105,13 @@
         "alt": {
           "type": "string",
           "title": "Alt"
+        },
+        "trackingId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Tracking Id"
         }
       },
       "required": [
