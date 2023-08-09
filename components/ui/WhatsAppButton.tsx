@@ -116,7 +116,8 @@ export default function WhatsAppButton(
             style="background-image: url(https://www.davidsonsilva.com.br/wp-content/uploads/2023/04/bg-whatsapp.png)"
           >
             <p class="buss-msg bg-[white] w-5/6 p-2 rounded text-base relative">
-              Olá, precisa de um orçamento? Me informe seus dados, por favor.
+              Olá, quer saber mais sobres nossas ofertas exclusivas? Me informe
+              seus dados, por favor.
             </p>
 
             <form
