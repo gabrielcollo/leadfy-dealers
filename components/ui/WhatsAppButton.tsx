@@ -126,7 +126,10 @@ export default function WhatsAppButton(
               method="post"
               id="wpp-form"
               class="flex flex-col gap-2 items-end"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                saveLead()
+                e.preventDefault()
+              }}
             >
               <div class="campo w-5/6">
                 <label for="nome" class="hidden">Nome</label>
@@ -167,7 +170,6 @@ export default function WhatsAppButton(
                 <button
                   type="submit"
                   class="transition-all bg-[#0c6156] border border-[#0c6156] text-white font-semibold rounded px-6 py-3 flex items-center gap-2"
-                  onClick={() => saveLead()}
                 >
                   Iniciar conversa
                   <svg
