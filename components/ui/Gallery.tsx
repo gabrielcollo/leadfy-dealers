@@ -58,7 +58,7 @@ export function ProductCard(
         <a
           href={`/${idLoja}/${
             vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
-          }`}
+          }-${vehicle["g:id"][0]}`}
           class="sm:min-h-[320px]"
         >
           <Image

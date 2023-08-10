@@ -9,8 +9,8 @@ locally.
 ---
 
 NOTE: To edit or create new pages with existing components, you don't need to
-edit the code! Just go to any page and hit `.` to open the editor of
-the current page you're seeing.
+edit the code! Just go to any page and hit `.` to open the editor of the current
+page you're seeing.
 
 ---
 
