@@ -40,10 +40,10 @@ export default function WhatsAppButton(
       .then((response) => {
         if (response.status == 200) {
           window.open(
-            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de mais informações sobre as ofertas imperdíveis da ${title}! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value}&phone=${
+            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de mais informações sobre as ofertas imperdíveis! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value}&phone=${
               clearWhatsApp(whatsapp)
             }`,
-            "_self",
+            "_blank",
           );
         }
       });
@@ -127,8 +127,8 @@ export default function WhatsAppButton(
               id="wpp-form"
               class="flex flex-col gap-2 items-end"
               onSubmit={(e) => {
-                saveLead()
-                e.preventDefault()
+                saveLead();
+                e.preventDefault();
               }}
             >
               <div class="campo w-5/6">
