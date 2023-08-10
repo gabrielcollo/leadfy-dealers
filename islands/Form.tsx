@@ -27,6 +27,7 @@ export default function Form(
   }
 
   function saveLead() {
+    buttonText.value = "Enviando...";
     const data = {
       "records": [
         {
@@ -81,7 +82,10 @@ export default function Form(
       <form
         action=""
         class="py-4 flex flex-col gap-4"
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={(e) => {
+          saveLead();
+          e.preventDefault();
+        }}
       >
         <Input
           label={"Nome"}
@@ -109,7 +113,6 @@ export default function Form(
         />
         <button
           class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center"
-          onClick={() => saveLead()}
           disabled={buttonDisabled.value}
         >
           {buttonText.value}

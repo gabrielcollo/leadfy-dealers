@@ -29,10 +29,6 @@ export default function StoresHome(
     const { idLoja, title } = store;
     return (
       <>
-        <Head>
-          <title>{title}</title>
-          <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
-        </Head>
         <div>
           <Gallery
             vehicles={vehicles}
@@ -44,6 +40,7 @@ export default function StoresHome(
           whatsapp={storeDataFromApi.whatsapp}
           logo={storeDataFromApi.logo}
           idLoja={idLoja}
+          title={title}
         />
       </>
     );

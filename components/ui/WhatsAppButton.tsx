@@ -4,10 +4,11 @@ import Image from "deco-sites/std/components/Image.tsx";
 import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
 export default function WhatsAppButton(
-  { whatsapp, logo, idLoja }: {
+  { whatsapp, logo, idLoja, title }: {
     whatsapp: string;
     logo: string;
     idLoja: string;
+    title: string;
   },
 ) {
   const open = useSignal(false);
@@ -39,7 +40,7 @@ export default function WhatsAppButton(
       .then((response) => {
         if (response.status == 200) {
           window.open(
-            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de saber mais sobre os seus serviços! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value}&phone=${
+            `https://api.whatsapp.com/send?text=Olá meu nome é ${nome.value}, gostaria de mais informações sobre as ofertas imperdíveis da ${title}! Esses são os meus contatos:%0D%0A Telefone: ${telefone.value}&phone=${
               clearWhatsApp(whatsapp)
             }`,
             "_self",

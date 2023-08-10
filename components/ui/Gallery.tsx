@@ -72,7 +72,7 @@ export function ProductCard(
           <a
             href={`/${idLoja}/${
               vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
-            }`}
+            }-${vehicle["g:id"][0]}`}
             class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
           >
             Tenho interesse
