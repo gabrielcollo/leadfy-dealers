@@ -40,7 +40,6 @@ export default function StoresHome(
           whatsapp={storeDataFromApi.whatsapp}
           logo={storeDataFromApi.logo}
           idLoja={idLoja}
-          title={title}
         />
       </>
     );

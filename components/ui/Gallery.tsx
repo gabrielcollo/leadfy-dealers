@@ -48,12 +48,13 @@ export function ProductCard(
       <h3 class="text-[34px] text-black louis-bold text-center min-h-[102px] flex items-center ">
         {vehicle["g:title"][0].toUpperCase()}
       </h3>
-      <span class="text-[32px] font-bold text-[#d1ad57] py-2">
-        {formatPrice(Number(vehicle["g:price"][0]))}
-      </span>
       <span class="text-[16px] font-semibold pb-2 min-h-[80px]">
         {vehicle["g:description"][0]}
       </span>
+      <span class="text-[32px] font-bold text-[#d1ad57] py-2">
+        {formatPrice(Number(vehicle["g:price"][0]))}
+      </span>
+      
       <div class="px-0 sm:px-8">
         <a
           href={`/${idLoja}/${
@@ -73,7 +74,7 @@ export function ProductCard(
             href={`/${idLoja}/${
               vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
             }-${vehicle["g:id"][0]}`}
-            class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
+            class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap font-bold"
           >
             Tenho interesse
           </a>

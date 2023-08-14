@@ -4,11 +4,11 @@ import Image from "deco-sites/std/components/Image.tsx";
 import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
 export default function WhatsAppButton(
-  { whatsapp, logo, idLoja, title }: {
+  { whatsapp, logo, idLoja, vehicleName }: {
     whatsapp: string;
     logo: string;
     idLoja: string;
-    title: string;
+    vehicleName?: string;
   },
 ) {
   const open = useSignal(false);
@@ -23,6 +23,8 @@ export default function WhatsAppButton(
           "fields": {
             "Nome": nome.value,
             "Telefone": telefone.value,
+            "Carro": vehicleName || "",
+            "Email": "lead@leadfy.me"
           },
         },
       ],

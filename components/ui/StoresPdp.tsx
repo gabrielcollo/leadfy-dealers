@@ -53,7 +53,7 @@ export default function StoresPdp({ page, phone }: Props) {
           whatsapp={storeDataFromApi.whatsapp}
           logo={storeDataFromApi.logo}
           idLoja={idLoja}
-          title={storeDataFromApi.title}
+          vehicleName={vehicle["g:title"][0]}
         />
       </>
     );
