@@ -5,5 +5,9 @@ export interface Props {
 }
 
 export default function GTM({ trackingId }: Props) {
-  return trackingId && <GoogleTagManager trackingId={trackingId} />;
+  return (
+    <>
+      {trackingId && <GoogleTagManager trackingId={trackingId} />}
+    </>
+  );
 }

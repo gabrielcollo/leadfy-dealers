@@ -16,7 +16,6 @@ export default function Form(
   const nome = useSignal("");
   const telefone = useSignal("");
   const email = useSignal("");
-
   const buttonText = useSignal("Tenho interesse");
   const buttonDisabled = useSignal(false);
 
