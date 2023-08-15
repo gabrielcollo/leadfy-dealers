@@ -17,6 +17,7 @@ export default function Header({ logo, alt, trackingId }: Props) {
           <Image
             src={logo}
             width={200}
+            height={56}
             alt={alt}
           />
         </a>
