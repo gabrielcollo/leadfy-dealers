@@ -24,7 +24,7 @@ export default function WhatsAppButton(
             "Nome": nome.value,
             "Telefone": telefone.value,
             "Carro": vehicleName || "",
-            "Email": "lead@leadfy.me"
+            "Email": "lead@leadfy.me",
           },
         },
       ],
