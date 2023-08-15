@@ -54,7 +54,7 @@ export function ProductCard(
       <span class="text-[32px] font-bold text-[#d1ad57] py-2">
         {formatPrice(Number(vehicle["g:price"][0]))}
       </span>
-
+      
       <div class="px-0 sm:px-8">
         <a
           href={`/${idLoja}/${
@@ -64,8 +64,7 @@ export function ProductCard(
         >
           <Image
             src={vehicle["g:image_link"][0]}
-            width={515}
-            height={290}
+            width={516}
             class="hover:scale-[1.05] cursor-pointer transition-all duration-300"
           />
         </a>
