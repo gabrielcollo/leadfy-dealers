@@ -5,7 +5,7 @@ export default function CallNowButton({ phone }: { phone: string }) {
     <a
       href={`tel:${clearWhatsApp(phone)}`}
       target="_blank"
-      class="bg-[white] text-[#d1ad57] border-[2px] border-[#d1ad57] font-bold tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
+      class="bg-[white]  text-[#d1ad57] border-[2px] border-[#d1ad57] font-bold tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap"
     >
       Ligue Agora
     </a>

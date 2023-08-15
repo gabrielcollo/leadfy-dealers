@@ -1,5 +1,3 @@
-import daisyui from "daisyui";
-
 export const theme = {
   "primary": "hsl(180 100% 10%)",
   "secondary": "hsl(0 39% 39%)",
@@ -24,7 +22,5 @@ export const theme = {
 };
 
 export default {
-  plugins: [daisyui],
-  daisyui: { themes: [], logs: false },
   content: ["./**/*.tsx"],
 };

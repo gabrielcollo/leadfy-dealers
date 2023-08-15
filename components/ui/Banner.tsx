@@ -15,20 +15,14 @@ export default function Banner({ bannerDesktop, bannerMobile, alt }: Props) {
         <Source
           media="(max-width: 1024px)"
           fetchPriority={"high"}
-          loading={"eager"}
-          preload={true}
           src={bannerMobile}
-          width={414}
-          height={165}
+          width={360}
         />
         <Source
           media="(min-width: 1025px)"
-          fetchPriority={"high"}
-          loading={"eager"}
-          preload={true}
+          fetchPriority={"low"}
           src={bannerDesktop}
-          width={1280}
-          height={512}
+          width={1440}
         />
         <img
           class="w-full"
