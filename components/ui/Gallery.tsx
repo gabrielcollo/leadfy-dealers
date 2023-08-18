@@ -5,7 +5,9 @@ import {
   formatPrice,
 } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
-import CallNowButton from "deco-sites/leadfy-dealers/components/ui/CallNowButton.tsx";
+import WhatsAppNormalButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppNormalButton.tsx";
+
+import type { ProductCard } from "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx";
 
 import type {
   Vehicle,
@@ -13,21 +15,23 @@ import type {
 } from "deco-sites/leadfy-dealers/components/types.ts";
 
 export default function Gallery(
-  { vehicles, idLoja, phone }: {
+  { vehicles, idLoja, phone, productCard }: {
     vehicles: Vehicles;
     idLoja: string;
     phone?: string;
+    productCard: ProductCard;
   },
 ) {
   return (
     <div class="pt-5">
-      <div class="container flex justify-center flex-wrap gap-2 px-5 sm:px-0 py-5">
+      <div class="max-w-[1280px] mx-auto flex justify-center flex-wrap gap-2 px-5 sm:px-0 py-5">
         {vehicles.map((vehicle: Vehicle) => {
           return (
             <ProductCard
               vehicle={vehicle}
               idLoja={idLoja}
               phone={phone}
+              productCard={productCard}
             />
           );
         })}
@@ -37,10 +41,11 @@ export default function Gallery(
 }
 
 export function ProductCard(
-  { vehicle, idLoja, phone }: {
+  { vehicle, idLoja, phone, productCard }: {
     vehicle: Vehicle;
     idLoja: string;
     phone?: string;
+    productCard: ProductCard;
   },
 ) {
   return (
@@ -77,9 +82,15 @@ export function ProductCard(
             }-${vehicle["g:id"][0]}`}
             class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap font-bold"
           >
-            Tenho interesse
+            {productCard.textButton}
           </a>
-          {phone && <CallNowButton phone={phone} />}
+          {phone && (
+            <WhatsAppNormalButton
+              phone={phone}
+              text={productCard.textWhatsButton}
+              image={productCard.whatsImage}
+            />
+          )}
         </div>
       </div>
     </div>

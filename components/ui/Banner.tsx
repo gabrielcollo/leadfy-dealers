@@ -10,7 +10,7 @@ export interface Props {
 
 export default function Banner({ bannerDesktop, bannerMobile, alt }: Props) {
   return (
-    <div class="container">
+    <div class="container pt-[96px] sm:pt-[112px]">
       <Picture preload={true}>
         <Source
           media="(max-width: 1024px)"

@@ -16,29 +16,36 @@ export interface Props {
 export default function Footer({ content, interval }: Props) {
   const id = useId();
   return (
-    <div
-      id={id}
-      class="relative grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] py-12 max-w-[1280px] mx-auto"
-    >
-      <Slider
-        class={`carousel carousel-center w-full col-span-full row-span-full ${
-          content.length < 5 ? "sm:justify-center" : ""
-        }`}
+    <div class="w-full bg-[#6e6e6e] text-white">
+      <div
+        id={id}
+        class="relative grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] py-12 max-w-[1280px] mx-auto"
       >
-        {content?.map((text, index) => (
-          <Slider.Item
-            index={index}
-            class="carousel-item justify-center w-full sm:w-[256px]"
-          >
-            <Quilltext html={text} />
-          </Slider.Item>
-        ))}
-      </Slider>
+        <Slider
+          class={`carousel carousel-center w-full col-span-full row-span-full ${
+            content.length < 5 ? "sm:justify-center" : ""
+          }`}
+        >
+          {content?.map((text, index) => (
+            <Slider.Item
+              index={index}
+              class="carousel-item justify-center w-full sm:w-[256px]"
+            >
+              <Quilltext html={text} />
+            </Slider.Item>
+          ))}
+        </Slider>
 
-      <div class={`block ${content.length <= 5 ? "sm:hidden" : ""}`}>
-        <Buttons />
+        <div class={`block ${content.length <= 5 ? "sm:hidden" : ""}`}>
+          <Buttons />
+        </div>
+        <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
       </div>
-      <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
+      <div class="flex justify-between max-w-[1280px] mx-auto py-4 border-t-[1px] border-white px-5">
+        <span class="text-[14px] font-bold">
+          © 2023 Todos os Direitos Reservados
+        </span>
+      </div>
     </div>
   );
 }
@@ -49,7 +56,7 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 absolute left-4 sm:left-[-16px] top-1/2">
         <Slider.PrevButton>
           <Icon
-            class="text-[black]"
+            class="text-[white]"
             size={16}
             id="ChevronLeft"
             strokeWidth={2}
@@ -59,7 +66,7 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 absolute right-4 sm:right-[-16px] top-1/2">
         <Slider.NextButton>
           <Icon
-            class="text-[black]"
+            class="text-[white]"
             size={16}
             id="ChevronRight"
             strokeWidth={2}

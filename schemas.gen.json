@@ -7550,6 +7550,28 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@WhatsNormalButton": {
+      "type": "object",
+      "properties": {
+        "textWhatsButton": {
+          "type": "string",
+          "title": "Text Whats Button"
+        },
+        "whatsImage": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Whats Image"
+        }
+      },
+      "required": [
+        "textWhatsButton"
+      ],
+      "title": "WhatsNormalButton"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1NsaWRlckpTLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -7976,11 +7998,6 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
-      "type": "string",
-      "format": "image-uri",
-      "title": "Image"
-    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Jhbm5lci50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8004,6 +8021,28 @@
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Banner.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@ProductCard": {
+      "type": "object",
+      "properties": {
+        "textButton": {
+          "type": "string",
+          "title": "Text Button"
+        },
+        "textWhatsButton": {
+          "type": "string",
+          "title": "Text Whats Button"
+        },
+        "whatsImage": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Whats Image"
+        }
+      },
+      "required": [
+        "textButton",
+        "textWhatsButton"
+      ],
+      "title": "ProductCard"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@Props": {
       "type": "object",
       "properties": {
@@ -8021,19 +8060,25 @@
           "description": "SEO Title",
           "title": "Title"
         },
-        "phone": {
+        "whatsButton": {
           "type": [
-            "string",
+            "boolean",
             "null"
           ],
-          "description": "Phone Number",
-          "title": "Phone"
+          "description": "Show WhatsApp Button",
+          "title": "Whats Button"
+        },
+        "productCard": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@ProductCard",
+          "description": "ProductCard informations",
+          "title": "Product Card"
         }
       },
       "required": [
         "idLoja",
         "label",
-        "title"
+        "title",
+        "productCard"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx@Props"
     },
@@ -8095,9 +8140,50 @@
       "required": [],
       "title": "deco-sites/leadfy-dealers/sections/GTM.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Social": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Logo"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "logo",
+        "alt",
+        "href"
+      ],
+      "title": "Social"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Social[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Social"
+      },
+      "title": "Social[]"
+    },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Props": {
       "type": "object",
       "properties": {
+        "brandLogo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Brand Logo"
+        },
+        "brandName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Brand Name"
+        },
         "logo": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
@@ -8112,11 +8198,16 @@
             "null"
           ],
           "title": "Tracking Id"
+        },
+        "socialMedias": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Social[]",
+          "title": "Social Medias"
         }
       },
       "required": [
         "logo",
-        "alt"
+        "alt",
+        "socialMedias"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Header.tsx@Props"
     },
@@ -8160,12 +8251,17 @@
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@Props": {
       "type": "object",
       "properties": {
-        "phone": {
+        "whatsNormalButton": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1N0b3Jlc1BkcC50c3g=@WhatsNormalButton",
+          "title": "Whats Normal Button"
+        },
+        "whatsFloatButton": {
           "type": [
-            "string",
+            "boolean",
             "null"
           ],
-          "title": "Phone"
+          "description": "Show WhatsApp Float Button",
+          "title": "Whats Float Button"
         },
         "page": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3R5cGVzLnRz@PdpReturn|null",
@@ -8173,6 +8269,7 @@
         }
       },
       "required": [
+        "whatsNormalButton",
         "page"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/StoresPdp.tsx@Props"

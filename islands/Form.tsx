@@ -4,13 +4,16 @@ import { useSignal } from "@preact/signals";
 
 import { formatPrice } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
-import CallNowButton from "deco-sites/leadfy-dealers/components/ui/CallNowButton.tsx";
+import WhatsAppNormalButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppNormalButton.tsx";
+
+import type { WhatsNormalButton } from "deco-sites/leadfy-dealers/components/ui/StoresPdp.tsx";
 
 export default function Form(
-  { vehicle, idLoja, phone }: {
+  { vehicle, idLoja, phone, whatsNormalButton }: {
     vehicle: Vehicle;
     idLoja: string;
     phone?: string;
+    whatsNormalButton: WhatsNormalButton;
   },
 ) {
   const nome = useSignal("");
@@ -116,7 +119,13 @@ export default function Form(
         >
           {buttonText.value}
         </button>
-        {phone && <CallNowButton phone={phone} />}
+        {phone && (
+          <WhatsAppNormalButton
+            phone={phone}
+            text={whatsNormalButton.textWhatsButton}
+            image={whatsNormalButton.whatsImage}
+          />
+        )}
       </form>
     </div>
   );

@@ -2,18 +2,29 @@ import type { LoaderReturnType } from "$live/types.ts";
 
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
 import WhatsAppButton from "deco-sites/leadfy-dealers/islands/WhatsAppButton.tsx";
 import Image from "deco-sites/std/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
 
+export interface WhatsNormalButton {
+  textWhatsButton: string;
+  whatsImage?: LiveImage;
+}
+
 export interface Props {
-  phone?: string;
+  whatsNormalButton: WhatsNormalButton;
+  /** @description Show WhatsApp Float Button */
+  whatsFloatButton?: boolean;
   page: LoaderReturnType<PdpReturn | null>;
 }
 
-export default function StoresPdp({ page, phone }: Props) {
+export default function StoresPdp(
+  { page, whatsFloatButton = false, whatsNormalButton }: Props,
+) {
   if (page) {
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
@@ -24,7 +35,7 @@ export default function StoresPdp({ page, phone }: Props) {
           <link rel="icon" type="image/png" href={storeDataFromApi.logo}></link>
         </Head>
         <div>
-          <div class="container flex flex-col sm:flex-row">
+          <div class="max-w-[1280px] py-[96px] sm:py-[112px] mx-auto flex flex-col sm:flex-row">
             <div
               class={`w-full sm:w-1/2 px-5 pt-5 sm:px-0 flex gap-3 sm:flex-wrap sm:pt-10 overflow-auto scrollbar-none ${
                 vehicle["g:image_link"].length == 1 && "items-center"
@@ -45,16 +56,23 @@ export default function StoresPdp({ page, phone }: Props) {
               })}
             </div>
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-10 sticky top-0 self-start">
-              <Form vehicle={vehicle} idLoja={idLoja} phone={phone} />
+              <Form
+                vehicle={vehicle}
+                idLoja={idLoja}
+                phone={storeDataFromApi.whatsapp}
+                whatsNormalButton={whatsNormalButton}
+              />
             </div>
           </div>
         </div>
-        <WhatsAppButton
-          whatsapp={storeDataFromApi.whatsapp}
-          logo={storeDataFromApi.logo}
-          idLoja={idLoja}
-          vehicleName={vehicle["g:title"][0]}
-        />
+        {whatsFloatButton && (
+          <WhatsAppButton
+            whatsapp={storeDataFromApi.whatsapp}
+            logo={storeDataFromApi.logo}
+            idLoja={idLoja}
+            vehicleName={vehicle["g:title"][0]}
+          />
+        )}
       </>
     );
   }

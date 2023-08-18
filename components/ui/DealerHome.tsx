@@ -11,6 +11,12 @@ import WhatsAppButton from "deco-sites/leadfy-dealers/islands/WhatsAppButton.tsx
 import type { VehicleRss } from "deco-sites/leadfy-dealers/components/types.ts";
 import { Parser } from "xml2js";
 
+export interface ProductCard {
+  textButton: string;
+  textWhatsButton: string;
+  whatsImage?: LiveImage;
+}
+
 export interface Props {
   /** @title Id */
   /** @description Store id on Leadfy pannel */
@@ -18,29 +24,34 @@ export interface Props {
   label: string;
   /** @description SEO Title */
   title: string;
-  /** @description Phone Number */
-  phone?: string;
+  /** @description Show WhatsApp Button */
+  whatsButton?: boolean;
+  /** @description ProductCard informations */
+  productCard: ProductCard;
 }
 
 export default function StoresHome(
-  { store, vehicles, storeDataFromApi, phone }: SectionProps<typeof loader>,
+  { store, vehicles, storeDataFromApi }: SectionProps<typeof loader>,
 ) {
   if (store) {
-    const { idLoja, title } = store;
+    const { idLoja, title, whatsButton, productCard } = store;
     return (
       <>
         <div>
           <Gallery
             vehicles={vehicles}
             idLoja={idLoja}
-            phone={phone}
+            phone={storeDataFromApi.whatsapp}
+            productCard={productCard}
           />
         </div>
-        <WhatsAppButton
-          whatsapp={storeDataFromApi.whatsapp}
-          logo={storeDataFromApi.logo}
-          idLoja={idLoja}
-        />
+        {whatsButton && (
+          <WhatsAppButton
+            whatsapp={storeDataFromApi.whatsapp}
+            logo={storeDataFromApi.logo}
+            idLoja={idLoja}
+          />
+        )}
       </>
     );
   }
@@ -76,5 +87,5 @@ export const loader = async (
         .number[0],
   };
 
-  return { store, vehicles, storeDataFromApi, phone: store.phone };
+  return { store, vehicles, storeDataFromApi };
 };
