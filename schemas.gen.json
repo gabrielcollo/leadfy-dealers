@@ -69,6 +69,7 @@
               "./islands/Form.tsx",
               "./islands/SliderJS.tsx",
               "./islands/WhatsAppButton.tsx",
+              "./islands/WhatsAppNormalButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -7615,6 +7616,17 @@
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/SliderJS.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Image|null"
+    },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
       "properties": {
@@ -11204,6 +11216,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1doYXRzQXBwTm9ybWFsQnV0dG9uLnRzeA==": {
+      "title": "./islands/WhatsAppNormalButton.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/WhatsAppNormalButton.tsx"
+          ],
+          "default": "./islands/WhatsAppNormalButton.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -12868,6 +12896,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwTm9ybWFsQnV0dG9uLnRzeA=="
         }
       ]
     },

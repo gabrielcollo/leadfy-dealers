@@ -10,6 +10,7 @@ import * as $$$$2 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Form.tsx";
 import * as $$$$$1 from "./islands/SliderJS.tsx";
 import * as $$$$$2 from "./islands/WhatsAppButton.tsx";
+import * as $$$$$3 from "./islands/WhatsAppNormalButton.tsx";
 import * as $$$$$$$$0 from "./sections/Banner.tsx";
 import * as $$$$$$$$1 from "./sections/DealerHome.tsx";
 import * as $$$$$$$$2 from "./sections/DealerList.tsx";
@@ -194,6 +195,7 @@ const manifest = {
     "./islands/Form.tsx": $$$$$0,
     "./islands/SliderJS.tsx": $$$$$1,
     "./islands/WhatsAppButton.tsx": $$$$$2,
+    "./islands/WhatsAppNormalButton.tsx": $$$$$3,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,

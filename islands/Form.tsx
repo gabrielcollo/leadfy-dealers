@@ -9,11 +9,12 @@ import WhatsAppNormalButton from "deco-sites/leadfy-dealers/components/ui/WhatsA
 import type { WhatsNormalButton } from "deco-sites/leadfy-dealers/components/ui/StoresPdp.tsx";
 
 export default function Form(
-  { vehicle, idLoja, phone, whatsNormalButton }: {
+  { vehicle, idLoja, phone, whatsNormalButton, logo }: {
     vehicle: Vehicle;
     idLoja: string;
     phone?: string;
     whatsNormalButton: WhatsNormalButton;
+    logo: string;
   },
 ) {
   const nome = useSignal("");
@@ -119,14 +120,17 @@ export default function Form(
         >
           {buttonText.value}
         </button>
+      </form>
         {phone && (
           <WhatsAppNormalButton
             phone={phone}
             text={whatsNormalButton.textWhatsButton}
             image={whatsNormalButton.whatsImage}
+            idLoja={idLoja}
+            vehicleName={vehicle["g:title"][0]}
+            logo={logo}
           />
         )}
-      </form>
     </div>
   );
 }

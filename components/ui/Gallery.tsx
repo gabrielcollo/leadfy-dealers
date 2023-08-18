@@ -5,7 +5,7 @@ import {
   formatPrice,
 } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
-import WhatsAppNormalButton from "deco-sites/leadfy-dealers/components/ui/WhatsAppNormalButton.tsx";
+import WhatsAppNormalButton from "deco-sites/leadfy-dealers/islands/WhatsAppNormalButton.tsx";
 
 import type { ProductCard } from "deco-sites/leadfy-dealers/components/ui/DealerHome.tsx";
 
@@ -15,11 +15,12 @@ import type {
 } from "deco-sites/leadfy-dealers/components/types.ts";
 
 export default function Gallery(
-  { vehicles, idLoja, phone, productCard }: {
+  { vehicles, idLoja, phone, productCard, logo }: {
     vehicles: Vehicles;
     idLoja: string;
     phone?: string;
     productCard: ProductCard;
+    logo: string;
   },
 ) {
   return (
@@ -32,6 +33,7 @@ export default function Gallery(
               idLoja={idLoja}
               phone={phone}
               productCard={productCard}
+              logo={logo}
             />
           );
         })}
@@ -41,11 +43,12 @@ export default function Gallery(
 }
 
 export function ProductCard(
-  { vehicle, idLoja, phone, productCard }: {
+  { vehicle, idLoja, phone, productCard, logo }: {
     vehicle: Vehicle;
     idLoja: string;
     phone?: string;
     productCard: ProductCard;
+    logo: string;
   },
 ) {
   return (
@@ -89,6 +92,9 @@ export function ProductCard(
               phone={phone}
               text={productCard.textWhatsButton}
               image={productCard.whatsImage}
+              idLoja={idLoja}
+              vehicleName={vehicle["g:title"][0]}
+              logo={logo}
             />
           )}
         </div>
