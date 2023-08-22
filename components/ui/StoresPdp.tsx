@@ -5,7 +5,7 @@ import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
-import WhatsAppButton from "deco-sites/leadfy-dealers/islands/WhatsAppButton.tsx";
+import WhatsAppFloatButton from "deco-sites/leadfy-dealers/islands/WhatsAppFloatButton.tsx";
 import Image from "deco-sites/std/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
@@ -61,19 +61,11 @@ export default function StoresPdp(
                 idLoja={idLoja}
                 phone={storeDataFromApi.whatsapp}
                 whatsNormalButton={whatsNormalButton}
-                logo={storeDataFromApi.logo}
               />
             </div>
           </div>
         </div>
-        {whatsFloatButton && (
-          <WhatsAppButton
-            whatsapp={storeDataFromApi.whatsapp}
-            logo={storeDataFromApi.logo}
-            idLoja={idLoja}
-            vehicleName={vehicle["g:title"][0]}
-          />
-        )}
+        {whatsFloatButton && <WhatsAppFloatButton />}
       </>
     );
   }

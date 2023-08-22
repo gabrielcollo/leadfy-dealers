@@ -15,12 +15,10 @@ import type {
 } from "deco-sites/leadfy-dealers/components/types.ts";
 
 export default function Gallery(
-  { vehicles, idLoja, phone, productCard, logo }: {
+  { vehicles, idLoja, productCard }: {
     vehicles: Vehicles;
     idLoja: string;
-    phone?: string;
     productCard: ProductCard;
-    logo: string;
   },
 ) {
   return (
@@ -31,9 +29,7 @@ export default function Gallery(
             <ProductCard
               vehicle={vehicle}
               idLoja={idLoja}
-              phone={phone}
               productCard={productCard}
-              logo={logo}
             />
           );
         })}
@@ -43,12 +39,10 @@ export default function Gallery(
 }
 
 export function ProductCard(
-  { vehicle, idLoja, phone, productCard, logo }: {
+  { vehicle, idLoja, productCard }: {
     vehicle: Vehicle;
     idLoja: string;
-    phone?: string;
     productCard: ProductCard;
-    logo: string;
   },
 ) {
   return (
@@ -59,9 +53,11 @@ export function ProductCard(
       <span class="text-[16px] font-semibold pb-2 min-h-[80px]">
         {vehicle["g:description"][0]}
       </span>
-      <span class="text-[32px] font-bold text-[#d1ad57] py-2">
-        {formatPrice(Number(vehicle["g:price"][0]))}
-      </span>
+      {productCard.showPrice && (
+        <span class="text-[32px] font-bold text-[#d1ad57] py-2">
+          {formatPrice(Number(vehicle["g:price"][0]))}
+        </span>
+      )}
 
       <div class="px-0 sm:px-8">
         <a
@@ -87,16 +83,11 @@ export function ProductCard(
           >
             {productCard.textButton}
           </a>
-          {phone && (
-            <WhatsAppNormalButton
-              phone={phone}
-              text={productCard.textWhatsButton}
-              image={productCard.whatsImage}
-              idLoja={idLoja}
-              vehicleName={vehicle["g:title"][0]}
-              logo={logo}
-            />
-          )}
+          <WhatsAppNormalButton
+            text={productCard.textWhatsButton}
+            image={productCard.whatsImage}
+            vehicle={vehicle["g:title"][0]}
+          />
         </div>
       </div>
     </div>

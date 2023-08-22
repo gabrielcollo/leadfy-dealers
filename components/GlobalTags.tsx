@@ -23,6 +23,9 @@ function GlobalTags() {
             font-style: normal;
             font-display: swap;
           }
+          .ql-editor{
+            padding: 0px !important;
+          }
           `,
         }}
       >

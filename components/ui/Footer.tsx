@@ -8,12 +8,20 @@ import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { useId } from "deco-sites/leadfy-dealers/sdk/useId.ts";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
+import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
+
+export interface Store {
+  content: HTML;
+  labelPhone?: string;
+  phoneNumber?: string;
+}
+
 export interface Props {
-  content: HTML[];
+  stores: Store[];
   interval?: 0;
 }
 
-export default function Footer({ content, interval }: Props) {
+export default function Footer({ stores, interval }: Props) {
   const id = useId();
   return (
     <div class="w-full bg-[#6e6e6e] text-white">
@@ -23,20 +31,33 @@ export default function Footer({ content, interval }: Props) {
       >
         <Slider
           class={`carousel carousel-center w-full col-span-full row-span-full ${
-            content.length < 5 ? "sm:justify-center" : ""
+            stores.length < 5 ? "sm:justify-center" : ""
           }`}
         >
-          {content?.map((text, index) => (
+          {stores?.map((store, index) => (
             <Slider.Item
               index={index}
               class="carousel-item justify-center w-full sm:w-[256px]"
             >
-              <Quilltext html={text} />
+              <div class="flex flex-col gap-4">
+                <div>
+                  <Quilltext html={store.content} />
+                </div>
+                <div>
+                  <a
+                    href={`tel:${clearWhatsApp(store.phoneNumber || "")}`}
+                    class="text-white"
+                  >
+                    {store.labelPhone + " "}
+                    <span class="underline">{store.phoneNumber}</span>
+                  </a>
+                </div>
+              </div>
             </Slider.Item>
           ))}
         </Slider>
 
-        <div class={`block ${content.length <= 5 ? "sm:hidden" : ""}`}>
+        <div class={`block ${stores.length <= 5 ? "sm:hidden" : ""}`}>
           <Buttons />
         </div>
         <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />

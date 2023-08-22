@@ -3,6 +3,9 @@ import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 import GoogleTagManager from "partytown/integrations/GTM.tsx";
 
+import WhatsAppModal from "deco-sites/leadfy-dealers/islands/WhatsAppModal.tsx";
+import WhatsAppHeaderButton from "deco-sites/leadfy-dealers/islands/WhatsAppHeaderButton.tsx";
+
 export interface Social {
   logo: LiveImage;
   alt: string;
@@ -10,16 +13,32 @@ export interface Social {
 }
 
 export interface Props {
+  idLoja: string;
+  whatsAppNumber: string;
   brandLogo?: LiveImage;
   brandName?: string;
   logo: LiveImage;
   alt: string;
   trackingId?: string;
   socialMedias: Social[];
+  whatsApp: {
+    logo: LiveImage;
+    alt: string;
+  };
 }
 
 export default function Header(
-  { brandLogo, brandName, logo, alt, trackingId, socialMedias }: Props,
+  {
+    idLoja,
+    whatsAppNumber,
+    brandLogo,
+    brandName,
+    logo,
+    alt,
+    trackingId,
+    socialMedias,
+    whatsApp,
+  }: Props,
 ) {
   return (
     <>
@@ -56,11 +75,22 @@ export default function Header(
                 </a>
               );
             })}
+
+            <WhatsAppHeaderButton
+              logo={whatsApp.logo}
+              alt={whatsApp.alt}
+            />
           </div>
         </div>
       </div>
 
       {trackingId && <GoogleTagManager trackingId={trackingId} />}
+
+      <WhatsAppModal
+        logo={logo}
+        idLoja={idLoja}
+        phone={whatsAppNumber}
+      />
     </>
   );
 }
