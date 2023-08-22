@@ -12,6 +12,7 @@
     "static/",
     "README.md"
   ],
+  "nodeModulesDir": true,
   "importMap": "./import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
