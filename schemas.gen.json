@@ -68,7 +68,9 @@
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/Form.tsx",
               "./islands/SliderJS.tsx",
-              "./islands/WhatsAppButton.tsx",
+              "./islands/WhatsAppFloatButton.tsx",
+              "./islands/WhatsAppHeaderButton.tsx",
+              "./islands/WhatsAppModal.tsx",
               "./islands/WhatsAppNormalButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -8036,6 +8038,10 @@
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0RlYWxlckhvbWUudHN4@ProductCard": {
       "type": "object",
       "properties": {
+        "showPrice": {
+          "type": "boolean",
+          "title": "Show Price"
+        },
         "textButton": {
           "type": "string",
           "title": "Text Button"
@@ -8050,6 +8056,7 @@
         }
       },
       "required": [
+        "showPrice",
         "textButton",
         "textWhatsButton"
       ],
@@ -8112,19 +8119,46 @@
       "format": "html",
       "title": "HTML"
     },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]": {
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Store": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Content"
+        },
+        "labelPhone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label Phone"
+        },
+        "phoneNumber": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Phone Number"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "Store"
+    },
+    "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Store[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Store"
       },
-      "title": "HTML[]"
+      "title": "Store[]"
     },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Props": {
       "type": "object",
       "properties": {
-        "content": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]",
-          "title": "Content"
+        "stores": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0Zvb3Rlci50c3g=@Store[]",
+          "title": "Stores"
         },
         "interval": {
           "type": "number",
@@ -8134,7 +8168,7 @@
         }
       },
       "required": [
-        "content"
+        "stores"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Footer.tsx@Props"
     },
@@ -8185,6 +8219,14 @@
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Props": {
       "type": "object",
       "properties": {
+        "idLoja": {
+          "type": "string",
+          "title": "Id Loja"
+        },
+        "whatsAppNumber": {
+          "type": "string",
+          "title": "Whats App Number"
+        },
         "brandLogo": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Brand Logo"
@@ -8214,14 +8256,42 @@
         "socialMedias": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL0hlYWRlci50c3g=@Social[]",
           "title": "Social Medias"
+        },
+        "whatsApp": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Logo"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alt"
+            }
+          },
+          "required": [
+            "logo",
+            "alt"
+          ],
+          "title": "Whats App"
         }
       },
       "required": [
+        "idLoja",
+        "whatsAppNumber",
         "logo",
         "alt",
-        "socialMedias"
+        "socialMedias",
+        "whatsApp"
       ],
       "title": "deco-sites/leadfy-dealers/components/ui/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML"
+      },
+      "title": "HTML[]"
     },
     "ZGVjby1zaXRlcy9sZWFkZnktZGVhbGVycy9jb21wb25lbnRzL3VpL1JpY2hUZXh0LnRzeA==@Props": {
       "type": "object",
@@ -11200,8 +11270,8 @@
         }
       }
     },
-    "Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA==": {
-      "title": "./islands/WhatsAppButton.tsx",
+    "Li9pc2xhbmRzL1doYXRzQXBwRmxvYXRCdXR0b24udHN4": {
+      "title": "./islands/WhatsAppFloatButton.tsx",
       "type": "object",
       "required": [
         "__resolveType"
@@ -11210,9 +11280,41 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "./islands/WhatsAppButton.tsx"
+            "./islands/WhatsAppFloatButton.tsx"
           ],
-          "default": "./islands/WhatsAppButton.tsx"
+          "default": "./islands/WhatsAppFloatButton.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL1doYXRzQXBwSGVhZGVyQnV0dG9uLnRzeA==": {
+      "title": "./islands/WhatsAppHeaderButton.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/WhatsAppHeaderButton.tsx"
+          ],
+          "default": "./islands/WhatsAppHeaderButton.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL1doYXRzQXBwTW9kYWwudHN4": {
+      "title": "./islands/WhatsAppModal.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/WhatsAppModal.tsx"
+          ],
+          "default": "./islands/WhatsAppModal.tsx"
         }
       }
     },
@@ -12895,7 +12997,13 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL1NsaWRlckpTLnRzeA=="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwQnV0dG9uLnRzeA=="
+          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwRmxvYXRCdXR0b24udHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwSGVhZGVyQnV0dG9uLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwTW9kYWwudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL1doYXRzQXBwTm9ybWFsQnV0dG9uLnRzeA=="

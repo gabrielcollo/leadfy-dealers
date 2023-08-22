@@ -9,8 +9,10 @@ import * as $$$$1 from "./routes/styles.css.ts";
 import * as $$$$2 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Form.tsx";
 import * as $$$$$1 from "./islands/SliderJS.tsx";
-import * as $$$$$2 from "./islands/WhatsAppButton.tsx";
-import * as $$$$$3 from "./islands/WhatsAppNormalButton.tsx";
+import * as $$$$$2 from "./islands/WhatsAppFloatButton.tsx";
+import * as $$$$$3 from "./islands/WhatsAppHeaderButton.tsx";
+import * as $$$$$4 from "./islands/WhatsAppModal.tsx";
+import * as $$$$$5 from "./islands/WhatsAppNormalButton.tsx";
 import * as $$$$$$$$0 from "./sections/Banner.tsx";
 import * as $$$$$$$$1 from "./sections/DealerHome.tsx";
 import * as $$$$$$$$2 from "./sections/DealerList.tsx";
@@ -194,8 +196,10 @@ const manifest = {
   "islands": {
     "./islands/Form.tsx": $$$$$0,
     "./islands/SliderJS.tsx": $$$$$1,
-    "./islands/WhatsAppButton.tsx": $$$$$2,
-    "./islands/WhatsAppNormalButton.tsx": $$$$$3,
+    "./islands/WhatsAppFloatButton.tsx": $$$$$2,
+    "./islands/WhatsAppHeaderButton.tsx": $$$$$3,
+    "./islands/WhatsAppModal.tsx": $$$$$4,
+    "./islands/WhatsAppNormalButton.tsx": $$$$$5,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,

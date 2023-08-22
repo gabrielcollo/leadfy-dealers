@@ -20,6 +20,7 @@
     -moz-appearance: textfield;
     appearance: textfield;
   }
+  
 }
 
 @layer components {
@@ -45,7 +46,7 @@
 
   .container{
     width: 100%;
-    max-width: 2080px;
+    max-width: 2560px;
     margin-right: auto;
     margin-left: auto;
   }
