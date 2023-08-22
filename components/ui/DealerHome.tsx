@@ -43,6 +43,7 @@ export default function StoresHome(
             idLoja={idLoja}
             phone={storeDataFromApi.whatsapp}
             productCard={productCard}
+            logo={storeDataFromApi.logo}
           />
         </div>
         {whatsButton && (

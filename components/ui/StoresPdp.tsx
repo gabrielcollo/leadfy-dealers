@@ -55,12 +55,13 @@ export default function StoresPdp(
                 );
               })}
             </div>
-            <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-10 sticky top-0 self-start">
+            <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-10 top-0 self-start">
               <Form
                 vehicle={vehicle}
                 idLoja={idLoja}
                 phone={storeDataFromApi.whatsapp}
                 whatsNormalButton={whatsNormalButton}
+                logo={storeDataFromApi.logo}
               />
             </div>
           </div>
