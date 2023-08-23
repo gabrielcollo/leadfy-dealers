@@ -21,10 +21,13 @@ export default function Gallery(
     productCard: ProductCard;
   },
 ) {
+  const orderedVehicles = vehicles.sort(function (a, b) {
+    return Number(a["g:price"][0]) - Number(b["g:price"][0]);
+  });
   return (
     <div class="pt-5">
       <div class="max-w-[1280px] mx-auto flex justify-center flex-wrap gap-2 px-5 sm:px-0 py-5">
-        {vehicles.map((vehicle: Vehicle) => {
+        {orderedVehicles.map((vehicle: Vehicle) => {
           return (
             <ProductCard
               vehicle={vehicle}
