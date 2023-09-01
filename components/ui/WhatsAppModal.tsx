@@ -6,6 +6,7 @@ import { useUI } from "deco-sites/leadfy-dealers/sdk/useUI.ts";
 
 import Image from "deco-sites/std/components/Image.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import { useRef } from "preact/hooks";
 
 export default function WhatsAppModal(
   { phone, logo, idLoja }: {
@@ -14,10 +15,17 @@ export default function WhatsAppModal(
     idLoja: string;
   },
 ) {
-  const { displayWhatsAppModal, whatsAppModalInformation } = useUI();
+  const { displayWhatsAppModal, whatsAppModalInformation, whatsAppModalPosition } = useUI();
 
   const nome = useSignal("");
   const telefone = useSignal("");
+
+  const isMouseDown = useSignal(false);
+  const initX = useSignal(0);
+  const initY = useSignal(0)
+
+
+  const ref = useRef<HTMLDivElement>(null);
 
   function saveLead() {
     const data = {
@@ -58,12 +66,47 @@ export default function WhatsAppModal(
     <>
       <div>
         <div
-          class={`form-wpp fixed z-50 bottom-[100px] left-[calc(50%-175px)] sm:left-auto sm:right-8 sm:bottom-8 transition-all w-[350px] shadow rounded ${
+          id="draggable"
+          ref={ref}
+          class={`form-wpp flex flex-col fixed z-50 max-[720px]:modal-whatsapp-mobile  w-[350px] h-[350px] shadow rounded ${
             displayWhatsAppModal.value ? "block" : "hidden"
           }`}
+          style={{left: whatsAppModalPosition.value.left, top: whatsAppModalPosition.value.top}}
         >
-          <div class="head-wpp bg-[#0c6156] flex items-center justify-between p-4">
-            <div class="flex gap-2 items-center">
+          <div
+            class="head-wpp bg-[#0c6156] flex items-center justify-between p-4 cursor-move"
+            onMouseDown={(e) => {
+              isMouseDown.value = true;
+              document.body.style.userSelect = "none";
+              initX.value = e.offsetX;
+              initY.value = e.offsetY;
+            }}
+            onMouseMove={(e) => {
+              if (isMouseDown.value) {
+                let cx = e.clientX - initX.value,
+                  cy = e.clientY - initY.value;
+                if (cx < 0) {
+                  cx = 0;
+                }
+                if (cy < 0) {
+                  cy = 0;
+                }
+                if (window.innerWidth - e.clientX + initX.value  < 350) {
+                  cx = window.innerWidth - 350;
+                }
+                if (e.clientY > window.innerHeight - 350 + initY.value) {
+                  cy = window.innerHeight - 350;
+                }
+                ref.current.style.left = cx + "px";
+                ref.current.style.top = cy + "px";
+              }
+            }}
+            onMouseUp={() => {
+              isMouseDown.value = false;
+              document.body.style.userSelect = "auto";
+            }}
+          >
+            <div class="flex gap-2 items-center pointer-events-none">
               <Image
                 src={logo}
                 width={50}
@@ -75,6 +118,7 @@ export default function WhatsAppModal(
 
             <button
               type="button"
+              class="cursor-pointer"
               onClick={() => {
                 displayWhatsAppModal.value = false;
               }}
@@ -94,7 +138,7 @@ export default function WhatsAppModal(
           </div>
 
           <div
-            class="form-content bg-[#e9e0d7] bg-center bg-cover flex flex-col gap-2 p-4 rounded"
+            class="form-content bg-[#e9e0d7] bg-center bg-cover flex flex-col gap-2 p-4 rounded h-full"
             style="background-image: url(https://www.davidsonsilva.com.br/wp-content/uploads/2023/04/bg-whatsapp.png)"
           >
             <p class="buss-msg bg-[white] w-5/6 p-2 rounded text-base relative">

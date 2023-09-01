@@ -71,4 +71,11 @@
     -webkit-box-orient: vertical;
   }
   
+  .modal-whatsapp-mobile{
+    left: calc(50%-175px) !important;
+    bottom: 100px !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
 }

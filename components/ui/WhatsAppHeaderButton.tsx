@@ -5,7 +5,7 @@ import Image from "deco-sites/std/components/Image.tsx";
 export default function WhatsAppHeaderButton(
   { logo, alt }: { logo: string; alt: string },
 ) {
-  const { displayWhatsAppModal, whatsAppModalInformation } = useUI();
+  const { displayWhatsAppModal, whatsAppModalInformation, whatsAppModalPosition } = useUI();
 
   return (
     <>
@@ -13,6 +13,10 @@ export default function WhatsAppHeaderButton(
         onClick={() => {
           whatsAppModalInformation.value.vehicle = "";
           displayWhatsAppModal.value = !displayWhatsAppModal.value;
+          whatsAppModalPosition.value = {
+            left : window.innerWidth - 400,
+            top : 120
+          }
         }}
       >
         <Image
