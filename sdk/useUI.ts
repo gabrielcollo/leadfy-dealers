@@ -10,14 +10,14 @@ const whatsAppModalInformation = signal({
   vehicle: "",
 });
 const whatsAppModalPosition = signal({
-  left : 0,
+  left: 0,
   top: 0,
-})
+});
 
 const state = {
   displayWhatsAppModal,
   whatsAppModalInformation,
-  whatsAppModalPosition
+  whatsAppModalPosition,
 };
 
 export const useUI = () => state;

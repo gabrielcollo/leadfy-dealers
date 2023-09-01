@@ -15,15 +15,18 @@ export default function WhatsAppModal(
     idLoja: string;
   },
 ) {
-  const { displayWhatsAppModal, whatsAppModalInformation, whatsAppModalPosition } = useUI();
+  const {
+    displayWhatsAppModal,
+    whatsAppModalInformation,
+    whatsAppModalPosition,
+  } = useUI();
 
   const nome = useSignal("");
   const telefone = useSignal("");
 
   const isMouseDown = useSignal(false);
   const initX = useSignal(0);
-  const initY = useSignal(0)
-
+  const initY = useSignal(0);
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -71,7 +74,10 @@ export default function WhatsAppModal(
           class={`form-wpp flex flex-col fixed z-50 max-[720px]:modal-whatsapp-mobile  w-[350px] h-[350px] shadow rounded ${
             displayWhatsAppModal.value ? "block" : "hidden"
           }`}
-          style={{left: whatsAppModalPosition.value.left, top: whatsAppModalPosition.value.top}}
+          style={{
+            left: whatsAppModalPosition.value.left,
+            top: whatsAppModalPosition.value.top,
+          }}
         >
           <div
             class="head-wpp bg-[#0c6156] flex items-center justify-between p-4 cursor-move"
@@ -91,14 +97,14 @@ export default function WhatsAppModal(
                 if (cy < 0) {
                   cy = 0;
                 }
-                if (window.innerWidth - e.clientX + initX.value  < 350) {
+                if (window.innerWidth - e.clientX + initX.value < 350) {
                   cx = window.innerWidth - 350;
                 }
                 if (e.clientY > window.innerHeight - 350 + initY.value) {
                   cy = window.innerHeight - 350;
                 }
-                ref.current.style.left = cx + "px";
-                ref.current.style.top = cy + "px";
+                ref.current!.style.left = cx + "px";
+                ref.current!.style.top = cy + "px";
               }
             }}
             onMouseUp={() => {
