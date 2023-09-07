@@ -64,6 +64,7 @@ export default function WhatsAppModal(
             "_blank",
           );
         }
+        loading.value = false
       });
   }
 
