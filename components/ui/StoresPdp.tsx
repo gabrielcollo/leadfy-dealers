@@ -15,7 +15,6 @@ import Slider from "deco-sites/leadfy-dealers/components/ui/Slider.tsx";
 import SliderJS from "deco-sites/leadfy-dealers/islands/SliderJS.tsx";
 import { useId } from "deco-sites/leadfy-dealers/sdk/useId.ts";
 
-
 export interface WhatsNormalButton {
   textWhatsButton: string;
   whatsImage?: LiveImage;
@@ -35,10 +34,10 @@ export default function StoresPdp(
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
 
-    const images = vehicle["g:additional_image_link"][0] != "" ? 
-    [...vehicle["g:image_link"], ...vehicle["g:additional_image_link"]] :
-    [...vehicle["g:image_link"]]
-    
+    const images = vehicle["g:additional_image_link"][0] != ""
+      ? [...vehicle["g:image_link"], ...vehicle["g:additional_image_link"]]
+      : [...vehicle["g:image_link"]];
+
     return (
       <>
         <Head>
@@ -72,17 +71,20 @@ export default function StoresPdp(
   return <h1>Product Not Found</h1>;
 }
 
-function GalleryProductPage({images} : {images : string[]}){
+function GalleryProductPage({ images }: { images: string[] }) {
   const id = useId();
 
-  return(
+  return (
     <div
       id={id}
       class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-2">
         {images?.map((image, index) => (
-          <Slider.Item index={index} class="carousel-item w-full flex items-center">
+          <Slider.Item
+            index={index}
+            class="carousel-item w-full flex items-center"
+          >
             <Image
               class="w-full h-max"
               src={image}
@@ -98,10 +100,10 @@ function GalleryProductPage({images} : {images : string[]}){
 
       <SliderJS rootId={id} infinite />
     </div>
-  )
+  );
 }
 
-function Dots({ images }: {images : string[]}) {
+function Dots({ images }: { images: string[] }) {
   return (
     <>
       <ul class="carousel justify-center col-span-full gap-2 z-10 pt-5">

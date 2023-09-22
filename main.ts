@@ -15,7 +15,7 @@ await start($live(manifest, site), {
     ...plugins(),
     partytownPlugin({
       proxyUrl: "/proxy",
-      mainWindowAccessors: ["navigator", "scheduler"],
+      mainWindowAccessors: ["navigator"],
     }),
   ],
 });
