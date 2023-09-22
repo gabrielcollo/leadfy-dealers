@@ -13,6 +13,9 @@ import site from "./site.json" assert { type: "json" };
 await start($live(manifest, site), {
   plugins: [
     ...plugins(),
-    partytownPlugin(),
+    partytownPlugin({
+      proxyUrl: "/proxy",
+      mainWindowAccessors: ["navigator", "scheduler"],
+    }),
   ],
 });
