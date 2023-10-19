@@ -3,6 +3,7 @@ import daisyui from "daisyui";
 export const theme = {
   "primary": "hsl(180 100% 10%)",
   "secondary": "hsl(0 39% 39%)",
+  "tertiary": "hsl(180 100% 10%)",
   "accent": "hsl(150 100% 50%)",
   "neutral": "hsl(0 0% 20%)",
   "base-100": "hsl(0 0% 100%)",

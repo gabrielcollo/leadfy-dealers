@@ -67,7 +67,7 @@ export default function Form(
 
   return (
     <div>
-      <h1 class="text-[34px] text-black louis-bold">
+      <h1 class="text-[34px] text-primary louis-bold">
         {vehicle["g:title"][0].toUpperCase()}
       </h1>
       <div>
@@ -77,7 +77,7 @@ export default function Form(
         >
         </p>
       </div>
-      <span class="text-[32px] font-bold text-[#d1ad57]">
+      <span class="text-[32px] font-bold text-secondary">
         {formatPrice(Number(vehicle["g:price"][0]))}
       </span>
 
@@ -114,7 +114,7 @@ export default function Form(
           }}
         />
         <button
-          class="bg-[#d1ad57] text-[white] tracking-[3px] w-full py-2.5 flex justify-center items-center font-bold whitespace-nowrap"
+          class="bg-accent text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center font-bold whitespace-nowrap"
           disabled={buttonDisabled.value}
         >
           {buttonText.value}

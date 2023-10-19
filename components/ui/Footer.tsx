@@ -24,7 +24,7 @@ export interface Props {
 export default function Footer({ stores, interval }: Props) {
   const id = useId();
   return (
-    <div class="w-full bg-[#6e6e6e] text-white">
+    <div class="w-full bg-base-300 text-white">
       <div
         id={id}
         class="relative grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] py-12 max-w-[1280px] mx-auto"
@@ -77,7 +77,7 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 absolute left-4 sm:left-[-16px] top-1/2">
         <Slider.PrevButton>
           <Icon
-            class="text-[white]"
+            class="text-base-200"
             size={16}
             id="ChevronLeft"
             strokeWidth={2}
@@ -87,7 +87,7 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 absolute right-4 sm:right-[-16px] top-1/2">
         <Slider.NextButton>
           <Icon
-            class="text-[white]"
+            class="text-base-200"
             size={16}
             id="ChevronRight"
             strokeWidth={2}

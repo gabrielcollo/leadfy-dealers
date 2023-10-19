@@ -52,7 +52,6 @@ export default function Header(
                 alt={brandName}
               />
             )}
-            <div class="h-14 w-[2px] bg-black"></div>
             <a href="/">
               <Image
                 src={logo}
