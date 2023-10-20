@@ -22,7 +22,7 @@ export default function WhatsAppNormalButton(
         <button
           id="wpp-link"
           type="button"
-          class="bg-base text-accent border-[2px] border-accent font-bold tracking-[3px] w-full py-2.5 flex gap-2 justify-center items-center whitespace-nowrap"
+          class="bg-base btn text-accent border-[2px] border-accent font-bold tracking-[3px] w-full py-2.5 flex gap-2 justify-center items-center whitespace-nowrap"
           onClick={(e) => {
             whatsAppModalInformation.value.vehicle = vehicle || "";
             displayWhatsAppModal.value = true;

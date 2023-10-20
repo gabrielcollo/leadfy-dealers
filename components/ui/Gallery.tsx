@@ -82,7 +82,7 @@ export function ProductCard(
             href={`/${idLoja}/${
               vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
             }-${vehicle["g:id"][0]}`}
-            class="bg-accent text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap font-bold"
+            class="bg-accent btn text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap font-bold"
           >
             {productCard.textButton}
           </a>

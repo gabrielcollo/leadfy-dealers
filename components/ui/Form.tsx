@@ -114,7 +114,7 @@ export default function Form(
           }}
         />
         <button
-          class="bg-accent text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center font-bold whitespace-nowrap"
+          class="btn bg-accent text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center font-bold whitespace-nowrap"
           disabled={buttonDisabled.value}
         >
           {buttonText.value}
