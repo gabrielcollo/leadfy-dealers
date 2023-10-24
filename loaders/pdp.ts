@@ -42,7 +42,7 @@ export default async function searchPdp(
       const titleCar = car["g:title"][0].toLowerCase().replaceAll("-", " ");
       const idCar = car["g:id"][0];
       const slugCleaned = decodeURIComponent(slug.replaceAll("-", " ").toLowerCase());
-      return slugCleaned.includes(titleCar) && slugCleaned.includes(idCar);
+      return slugCleaned.includes('oferta/') && slugCleaned.includes(titleCar) && slugCleaned.includes(idCar);
     }),
   };
 
