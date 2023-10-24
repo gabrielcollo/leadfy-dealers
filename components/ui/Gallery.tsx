@@ -64,7 +64,7 @@ export function ProductCard(
 
       <div class="px-0 sm:px-8">
         <a
-          href={`/${idLoja}/${
+          href={`/${idLoja}/oferta-${
             vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
           }-${vehicle["g:id"][0]}`}
           class="sm:min-h-[320px]"
