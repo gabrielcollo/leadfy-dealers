@@ -3,27 +3,28 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$0 from "./loaders/pdp.ts";
-import * as $$$$0 from "./routes/styles.css.ts";
-import * as $$$$1 from "./routes/api/airtable.ts";
+import * as $$$$0 from "./routes/api/airtable.ts";
+import * as $$$$1 from "./routes/styles.css.ts";
 import * as $$$$2 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/WhatsAppModal.tsx";
-import * as $$$$$1 from "./islands/WhatsAppFloatButton.tsx";
-import * as $$$$$2 from "./islands/WhatsAppHeaderButton.tsx";
-import * as $$$$$3 from "./islands/SliderJS.tsx";
-import * as $$$$$4 from "./islands/WhatsAppNormalButton.tsx";
-import * as $$$$$5 from "./islands/Form.tsx";
-import * as $$$$$$$$0 from "./sections/DealerHome.tsx";
-import * as $$$$$$$$1 from "./sections/DealerList.tsx";
-import * as $$$$$$$$2 from "./sections/Banner.tsx";
-import * as $$$$$$$$3 from "./sections/SectionList.tsx";
-import * as $$$$$$$$4 from "./sections/LeadfyLogo.tsx";
-import * as $$$$$$$$5 from "./sections/GTM.tsx";
-import * as $$$$$$$$6 from "./sections/RichText.tsx";
-import * as $$$$$$$$7 from "./sections/Theme.tsx";
-import * as $$$$$$$$8 from "./sections/Footer.tsx";
-import * as $$$$$$$$9 from "./sections/Header.tsx";
-import * as $$$$$$$$10 from "./sections/StoresPdp.tsx";
-import * as $$$$$$$$11 from "./sections/Carousel.tsx";
+import * as $$$$$0 from "./islands/Form.tsx";
+import * as $$$$$1 from "./islands/SliderJS.tsx";
+import * as $$$$$2 from "./islands/WhatsAppFloatButton.tsx";
+import * as $$$$$3 from "./islands/WhatsAppHeaderButton.tsx";
+import * as $$$$$4 from "./islands/WhatsAppModal.tsx";
+import * as $$$$$5 from "./islands/WhatsAppNormalButton.tsx";
+import * as $$$$$$$$0 from "./sections/Banner.tsx";
+import * as $$$$$$$$1 from "./sections/Carousel.tsx";
+import * as $$$$$$$$2 from "./sections/DealerHome.tsx";
+import * as $$$$$$$$3 from "./sections/DealerList.tsx";
+import * as $$$$$$$$4 from "./sections/Footer.tsx";
+import * as $$$$$$$$5 from "./sections/GlobalTags.tsx";
+import * as $$$$$$$$6 from "./sections/GTM.tsx";
+import * as $$$$$$$$7 from "./sections/Header.tsx";
+import * as $$$$$$$$8 from "./sections/LeadfyLogo.tsx";
+import * as $$$$$$$$9 from "./sections/RichText.tsx";
+import * as $$$$$$$$10 from "./sections/SectionList.tsx";
+import * as $$$$$$$$11 from "./sections/StoresPdp.tsx";
+import * as $$$$$$$$12 from "./sections/Theme.tsx";
 import { DecoManifest } from "$live/types.ts";
 import * as i2$$$0 from "$live/loaders/secret.ts";
 import * as i2$$$1 from "$live/loaders/state.ts";
@@ -203,16 +204,16 @@ const manifest = {
   },
   "routes": {
     "./routes/_app.tsx": $$$$2,
-    "./routes/api/airtable.ts": $$$$1,
-    "./routes/styles.css.ts": $$$$0,
+    "./routes/api/airtable.ts": $$$$0,
+    "./routes/styles.css.ts": $$$$1,
   },
   "islands": {
-    "./islands/Form.tsx": $$$$$5,
-    "./islands/SliderJS.tsx": $$$$$3,
-    "./islands/WhatsAppFloatButton.tsx": $$$$$1,
-    "./islands/WhatsAppHeaderButton.tsx": $$$$$2,
-    "./islands/WhatsAppModal.tsx": $$$$$0,
-    "./islands/WhatsAppNormalButton.tsx": $$$$$4,
+    "./islands/Form.tsx": $$$$$0,
+    "./islands/SliderJS.tsx": $$$$$1,
+    "./islands/WhatsAppFloatButton.tsx": $$$$$2,
+    "./islands/WhatsAppHeaderButton.tsx": $$$$$3,
+    "./islands/WhatsAppModal.tsx": $$$$$4,
+    "./islands/WhatsAppNormalButton.tsx": $$$$$5,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,
@@ -220,18 +221,19 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i2$$$$$2,
     "$live/sections/Slot.tsx": i2$$$$$3,
     "$live/sections/UseSlot.tsx": i2$$$$$4,
-    "deco-sites/leadfy-dealers/sections/Banner.tsx": $$$$$$$$2,
-    "deco-sites/leadfy-dealers/sections/Carousel.tsx": $$$$$$$$11,
-    "deco-sites/leadfy-dealers/sections/DealerHome.tsx": $$$$$$$$0,
-    "deco-sites/leadfy-dealers/sections/DealerList.tsx": $$$$$$$$1,
-    "deco-sites/leadfy-dealers/sections/Footer.tsx": $$$$$$$$8,
-    "deco-sites/leadfy-dealers/sections/GTM.tsx": $$$$$$$$5,
-    "deco-sites/leadfy-dealers/sections/Header.tsx": $$$$$$$$9,
-    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$$$4,
-    "deco-sites/leadfy-dealers/sections/RichText.tsx": $$$$$$$$6,
-    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$$$3,
-    "deco-sites/leadfy-dealers/sections/StoresPdp.tsx": $$$$$$$$10,
-    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$$$7,
+    "deco-sites/leadfy-dealers/sections/Banner.tsx": $$$$$$$$0,
+    "deco-sites/leadfy-dealers/sections/Carousel.tsx": $$$$$$$$1,
+    "deco-sites/leadfy-dealers/sections/DealerHome.tsx": $$$$$$$$2,
+    "deco-sites/leadfy-dealers/sections/DealerList.tsx": $$$$$$$$3,
+    "deco-sites/leadfy-dealers/sections/Footer.tsx": $$$$$$$$4,
+    "deco-sites/leadfy-dealers/sections/GlobalTags.tsx": $$$$$$$$5,
+    "deco-sites/leadfy-dealers/sections/GTM.tsx": $$$$$$$$6,
+    "deco-sites/leadfy-dealers/sections/Header.tsx": $$$$$$$$7,
+    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$$$8,
+    "deco-sites/leadfy-dealers/sections/RichText.tsx": $$$$$$$$9,
+    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$$$10,
+    "deco-sites/leadfy-dealers/sections/StoresPdp.tsx": $$$$$$$$11,
+    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$$$12,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configLinxImpulse.global.tsx": i2$$$$$7,
