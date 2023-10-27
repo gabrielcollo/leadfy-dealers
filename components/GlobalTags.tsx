@@ -1,6 +1,9 @@
 import { asset, Head } from "$fresh/runtime.ts";
 
-function GlobalTags() {
+function GlobalTags({ googleKey, facebookKey }: {
+  googleKey?: string;
+  facebookKey?: string;
+},) {
   return (
     <Head>
       {/* Tailwind v3 CSS file */}
@@ -33,6 +36,10 @@ function GlobalTags() {
 
       {/* Web Manifest */}
       <link rel="manifest" href={asset("/site.webmanifest")} />
+
+      <meta name="google-site-verification" content={googleKey} />
+
+      <meta name="facebook-domain-verification" content={facebookKey} />
     </Head>
   );
 }
