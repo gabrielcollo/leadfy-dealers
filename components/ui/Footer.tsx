@@ -46,7 +46,7 @@ export default function Footer({ stores, interval }: Props) {
                 <div>
                   <a
                     href={`tel:${clearWhatsApp(store.phoneNumber || "")}`}
-                    class="text-white"
+                    class="text-black"
                   >
                     {store.labelPhone + " "}
                     <span class="underline">{store.phoneNumber}</span>

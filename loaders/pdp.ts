@@ -39,10 +39,10 @@ export default async function searchPdp(
           .number[0],
     },
     result: vehicles.filter((car: Vehicle) => {
-      const titleCar = car["g:title"][0].toLowerCase();
+      const titleCar = car["g:title"][0].toLowerCase().replaceAll("-", " ");
       const idCar = car["g:id"][0];
-      const slugCleaned = slug.replaceAll("-", " ").toLowerCase();
-      return slugCleaned.includes(titleCar) && slugCleaned.includes(idCar);
+      const slugCleaned = decodeURIComponent(slug.replaceAll("-", " ").toLowerCase());
+      return slugCleaned.includes('oferta') && slugCleaned.includes(titleCar) && slugCleaned.includes(idCar);
     }),
   };
 
