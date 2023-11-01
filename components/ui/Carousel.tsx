@@ -2,9 +2,9 @@ import Icon from "deco-sites/leadfy-dealers/components/ui/Icon.tsx";
 import Button from "deco-sites/leadfy-dealers/components/ui/Button.tsx";
 import Slider from "deco-sites/leadfy-dealers/components/ui/Slider.tsx";
 import SliderJS from "deco-sites/leadfy-dealers/islands/SliderJS.tsx";
-import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
+import { Picture, Source } from "apps/website/components/Picture.tsx";
 import { useId } from "deco-sites/leadfy-dealers/sdk/useId.ts";
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 /**
  * @titleBy alt
@@ -53,7 +53,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <a
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative overflow-y-hidden w-full" 
+      class="relative overflow-y-hidden w-full"
       target="_blank"
     >
       <Picture preload={lcp}>
