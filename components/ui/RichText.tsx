@@ -1,8 +1,8 @@
-import type { HTML } from "deco-sites/std/components/types.ts";
+import type { HTMLWidget } from "apps/admin/widgets.ts";
 import Quilltext from "deco-sites/std/components/QuillText.tsx";
 
 export interface Props {
-  content: HTML[];
+  content: HTMLWidget[];
 }
 
 export default function RichText({ content }: Props) {

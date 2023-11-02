@@ -2,11 +2,11 @@ import type { LoaderReturnType } from "$live/types.ts";
 
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
 import WhatsAppFloatButton from "deco-sites/leadfy-dealers/islands/WhatsAppFloatButton.tsx";
-import Image from "deco-sites/std/components/Image.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
 

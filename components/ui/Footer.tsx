@@ -1,17 +1,17 @@
-import type { HTML } from "deco-sites/std/components/types.ts";
+import type { HTMLWidget } from "apps/admin/widgets.ts";
 import Quilltext from "deco-sites/std/components/QuillText.tsx";
 
 import Icon from "deco-sites/leadfy-dealers/components/ui/Icon.tsx";
 import Slider from "deco-sites/leadfy-dealers/components/ui/Slider.tsx";
 import SliderJS from "deco-sites/leadfy-dealers/islands/SliderJS.tsx";
-import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
+import { Picture, Source } from "apps/website/components/Picture.tsx";
 import { useId } from "deco-sites/leadfy-dealers/sdk/useId.ts";
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
 
 export interface Store {
-  content: HTML;
+  content: HTMLWidget;
   labelPhone?: string;
   phoneNumber?: string;
 }

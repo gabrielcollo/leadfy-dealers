@@ -3,7 +3,7 @@ import { asset, Head } from "$fresh/runtime.ts";
 function GlobalTags({ googleKey, facebookKey }: {
   googleKey?: string;
   facebookKey?: string;
-},) {
+}) {
   return (
     <Head>
       {/* Tailwind v3 CSS file */}

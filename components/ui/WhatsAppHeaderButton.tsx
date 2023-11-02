@@ -1,6 +1,6 @@
 import { useUI } from "deco-sites/leadfy-dealers/sdk/useUI.ts";
 
-import Image from "deco-sites/std/components/Image.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export default function WhatsAppHeaderButton(
   { logo, alt }: { logo: string; alt: string },
