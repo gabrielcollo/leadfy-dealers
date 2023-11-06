@@ -24,7 +24,7 @@ export interface Props {
   whatsNormalButton: WhatsNormalButton;
   /** @description Show WhatsApp Float Button */
   whatsFloatButton?: boolean;
-  page: LoaderReturnType<PdpReturn | null>;
+  page: PdpReturn;
 }
 
 export default function StoresPdp(

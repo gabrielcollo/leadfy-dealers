@@ -3,7 +3,7 @@ import type {
   Vehicle,
   VehicleRss,
 } from "deco-sites/leadfy-dealers/components/types.ts";
-import type { RequestURLParam } from "deco-sites/std/functions/requestToParam.ts";
+import type { RequestURLParam } from "apps/website/functions/requestToParam.ts";
 
 import { Parser } from "xml2js";
 
