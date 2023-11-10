@@ -31,6 +31,7 @@ export default function StoresPdp(
   { page, whatsFloatButton = false, whatsNormalButton }: Props,
 ) {
   if (page) {
+    console.log(page)
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
 

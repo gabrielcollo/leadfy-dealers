@@ -65,7 +65,7 @@ export function ProductCard(
       <div class="px-0 sm:px-8">
         <a
           href={`/${idLoja}/oferta-${
-            vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
+            vehicle["g:title"][0].replaceAll(" ", "-").replaceAll("/", "|").toLowerCase()
           }-${vehicle["g:id"][0]}`}
           class="sm:min-h-[320px]"
         >
@@ -80,7 +80,7 @@ export function ProductCard(
         <div class="flex flex-col gap-3 py-3">
           <a
             href={`/${idLoja}/oferta-${
-              vehicle["g:title"][0].replaceAll(" ", "-").toLowerCase()
+              vehicle["g:title"][0].replaceAll(" ", "-").replaceAll("/", "|").toLowerCase()
             }-${vehicle["g:id"][0]}`}
             class="bg-accent btn text-base-200 tracking-[3px] w-full py-2.5 flex justify-center items-center whitespace-nowrap font-bold"
           >

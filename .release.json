@@ -1,0 +1,927 @@
+{
+  "decohub": {
+    "__resolveType": "deco-sites/leadfy-dealers/apps/decohub.ts"
+  },
+  "admin-app": {
+    "resolvables": {
+      "__resolveType": "deco-sites/admin/loaders/state.ts"
+    },
+    "__resolveType": "decohub/apps/admin.ts"
+  },
+  "./routes/[...catchall].tsx": {
+    "__resolveType": "$live/handlers/routesSelection.ts",
+    "audiences": [
+      {
+        "__resolveType": "everyone"
+      },
+      {
+        "__resolveType": "everyone"
+      },
+      {
+        "__resolveType": "everyone"
+      }
+    ]
+  },
+  "./routes/_middleware.ts": {
+    "__resolveType": "$live/loaders/state.ts",
+    "state": []
+  },
+  "Footer Real Veículos": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Footer.tsx",
+    "content": [
+      "<p><strong>Del Castilho</strong></p><p>Estrada Adhemar Bebiano, 177<br><span class=\"ng-star-inserted\">Bairro Del Castilho<br></span>Rio de Janeiro - RJ<br>21051-070</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 3559-6202</p>",
+      "<p><strong>Barra da Tijuca</strong></p><p>Estrada da Barra da Tijuca, 465<br><span class=\"ng-star-inserted\">Bairro Barra da Tijuca<br></span>Rio de Janeiro - RJ<br>22611-202</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 2173-1500</p>",
+      "<p><strong>Botafogo</strong></p><p>Rua Real Grandeza, 123<br>Bairro Botafogo<span class=\"ng-star-inserted\"><br></span>Rio de Janeiro - RJ<br>22281-900</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 2126-8555</p>",
+      "<p><strong>Cascadura</strong></p><p>Av. Dom Helder Camara, 10087<br><span class=\"ng-star-inserted\">Bairro Cascadura<br></span>Rio de Janeiro - RJ<br>21380-008</p><p><br data-mce-bogus=\"1\"></p><p>Vendas:&nbsp;(21) 2583-9191</p>",
+      "<p><strong>Nova Iguaçu</strong></p><p>Rodovia Pres. Dutra, 12173<br><span class=\"ng-star-inserted\">Bairro Prata<br></span>Nova Iguaçu - RJ<br>26.221-190</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 3540-8333</p>"
+    ],
+    "interval": 0,
+    "stores": [
+      {
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><strong>Real Veículos | Vila da Penha</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Av. Vicente de Carvalho, 1017</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Vila da Penha&nbsp;</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Rio de Janeiro - RJ</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">CEP: 21210-623</span></p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "0800 707 0013"
+      },
+      {
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><strong>Real Veículos | Itaguaí</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Rio - Santos 2424</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><span class=\"ng-star-inserted\">Vila Ibirapitanga<br></span>Itaguaí - RJ</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">CEP: 23812-101</span></p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "0800 707 0013"
+      },
+      {
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><strong>Real Veículos | Copacabana</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Av. Princesa Isabel, 481</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Copacabana<span class=\"ng-star-inserted\"><br></span>Rio de Janeiro - RJ</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">CEP: 22011-010</span></p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "0800 707 0013"
+      },
+      {
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><strong>Ponto Avançado</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Av. Padre Guilherme Dec, 2385</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\"><span class=\"ng-star-inserted\">Santa Cruz<br></span>Rio de Janeiro - RJ</span><br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">CEP: 23575-000</span></p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "0800 707 0013"
+      }
+    ]
+  },
+  "Footer Simcauto": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Footer.tsx",
+    "content": [
+      "<p><strong>Del Castilho</strong></p><p>Estrada Adhemar Bebiano, 177<br><span class=\"ng-star-inserted\">Bairro Del Castilho<br></span>Rio de Janeiro - RJ<br>21051-070</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 3559-6202</p>",
+      "<p><strong>Barra da Tijuca</strong></p><p>Estrada da Barra da Tijuca, 465<br><span class=\"ng-star-inserted\">Bairro Barra da Tijuca<br></span>Rio de Janeiro - RJ<br>22611-202</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 2173-1500</p>",
+      "<p><strong>Botafogo</strong></p><p>Rua Real Grandeza, 123<br>Bairro Botafogo<span class=\"ng-star-inserted\"><br></span>Rio de Janeiro - RJ<br>22281-900</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 2126-8555</p>",
+      "<p><strong>Cascadura</strong></p><p>Av. Dom Helder Camara, 10087<br><span class=\"ng-star-inserted\">Bairro Cascadura<br></span>Rio de Janeiro - RJ<br>21380-008</p><p><br data-mce-bogus=\"1\"></p><p>Vendas:&nbsp;(21) 2583-9191</p>",
+      "<p><strong>Nova Iguaçu</strong></p><p>Rodovia Pres. Dutra, 12173<br><span class=\"ng-star-inserted\">Bairro Prata<br></span>Nova Iguaçu - RJ<br>26.221-190</p><p><br data-mce-bogus=\"1\"></p><p>Vendas: (21) 3540-8333</p>"
+    ],
+    "interval": 0,
+    "stores": [
+      {
+        "content": "<p><strong>Del Castilho</strong></p><p>Estrada Adhemar Bebiano, 177<br><span class=\"ng-star-inserted\">Bairro Del Castilho<br></span>Rio de Janeiro - RJ<br>21051-070</p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "(21) 3559-6202"
+      },
+      {
+        "content": "<p><strong>Barra da Tijuca</strong></p><p>Estrada da Barra da Tijuca, 465<br><span class=\"ng-star-inserted\">Bairro Barra da Tijuca<br></span>Rio de Janeiro - RJ<br>22611-202</p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "(21) 2173-1500"
+      },
+      {
+        "content": "<p><strong>Botafogo</strong></p><p>Rua Real Grandeza, 123<br>Bairro Botafogo<span class=\"ng-star-inserted\"><br></span>Rio de Janeiro - RJ<br>22281-900</p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "(21) 2126-8555"
+      },
+      {
+        "content": "<p><strong>Cascadura</strong></p><p>Av. Dom Helder Camara, 10087<br><span class=\"ng-star-inserted\">Bairro Cascadura<br></span>Rio de Janeiro - RJ<br>21380-008</p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "(21) 2583-9191"
+      },
+      {
+        "content": "<p><strong>Nova Iguaçu</strong></p><p>Rodovia Pres. Dutra, 12173<br><span class=\"ng-star-inserted\">Bairro Prata<br></span>Nova Iguaçu - RJ<br>26.221-190</p>",
+        "labelPhone": "Vendas:",
+        "phoneNumber": "(21) 3540-8333"
+      }
+    ]
+  },
+  "Header Real Veículos": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+    "alt": "Logo Real Veículos",
+    "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9c9a77c5-caca-4081-9bc5-576c21df5e80",
+    "brandName": "Volkswagen",
+    "idLoja": "6452",
+    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a22f2585-ff44-4af2-91ff-1054ba2a16b5",
+    "seoSection": {
+      "__resolveType": "deco-sites/std/sections/SEO.tsx",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+      "noIndexNoFollow": false,
+      "title": "Conheça a Simcauto Chevrolet",
+      "titleTemplate": "%s | Deco.cx",
+      "type": "website"
+    },
+    "socialMedias": [
+      {
+        "alt": "Facebook Logo",
+        "href": "https://www.facebook.com/GrupoRealVeiculos",
+        "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+      },
+      {
+        "alt": "Instagram Logo",
+        "href": "https://www.instagram.com/realveiculosvw",
+        "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+      }
+    ],
+    "whatsApp": {
+      "alt": "WhatsApp Logo",
+      "href": " ",
+      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+    },
+    "whatsAppNumber": "21 999084009"
+  },
+  "Header Simcauto": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+    "alt": "Logo Simcauto",
+    "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/00c57366-f312-4153-8995-b84ac014edb1",
+    "brandName": "Chevrolet",
+    "idLoja": "6378",
+    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/0dfed1dc-b329-44b7-ae07-29dbb23dfae8",
+    "seoSection": {
+      "__resolveType": "deco-sites/std/sections/SEO.tsx",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+      "noIndexNoFollow": false,
+      "title": "Conheça a Simcauto Chevrolet",
+      "titleTemplate": "%s | Deco.cx",
+      "type": "website"
+    },
+    "socialMedias": [
+      {
+        "alt": "Facebook Logo",
+        "href": "https://www.facebook.com/SimcautoChevrolet",
+        "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+      },
+      {
+        "alt": "Instagram Logo",
+        "href": "https://www.instagram.com/simcautochevroletrio",
+        "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+      }
+    ],
+    "whatsApp": {
+      "alt": "WhatsApp Logo",
+      "href": " ",
+      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+    },
+    "whatsAppNumber": "21 35596207"
+  },
+  "Intro Deco": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Intro.tsx",
+    "headline": "deco.cx",
+    "introduction": "<p><a href=\"deco.cx\" target=\"_blank\">deco.cx</a> is the best way for you to build your site</p>",
+    "links": [
+      {
+        "href": "https://twitter.com/decocx_commerce",
+        "title": "Twitter"
+      },
+      {
+        "href": "https://www.linkedin.com/company/deco-cx/?originalSubdomain=br",
+        "title": "LinkedIn"
+      },
+      {
+        "href": "http://github.com/deco-cx",
+        "title": "Github"
+      }
+    ],
+    "picture": "https://media.licdn.com/dms/image/D4D0BAQHBdzRnagoSUg/company-logo_200_200/0/1682012307830?e=2147483647&v=beta&t=rA3XxMn_rYI2MZTJS3FoLUodnOKCSTowLjK46tW58uM"
+  },
+  "Leadfy Analytics": {
+    "__resolveType": "deco-sites/std/sections/Analytics.tsx",
+    "trackingIds": [
+      "GTM-TJDPM9QG"
+    ]
+  },
+  "Leadfy GTM": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/GTM.tsx",
+    "trackingId": "GTM-TJDPM9QG"
+  },
+  "SEO Default": {
+    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+    "description": "This is a site template for deco.cx",
+    "image": "https://www.deco.cx/decocx-meta-en.png",
+    "title": "Start by deco.cx",
+    "titleTemplate": "%s | Start by deco.cx",
+    "type": "website"
+  },
+  "SEODefault": {
+    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+    "canonical": "https://www.chevrolet.com.br",
+    "description": "Encontre o Chevrolet que combina com você. Confira todos os modelos de carros hatch, sedan, esportivos, picapes, SUVs, conversíveis e muito mais!",
+    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/2643ebda-38f2-4dac-b4b1-18af0276be64",
+    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/29494d07-6fff-4ea1-a340-28d15789676e",
+    "locale": "",
+    "siteName": "",
+    "siteUrl": "",
+    "themeColor": "",
+    "title": "Concessionária Simcauto Chevrolet - Carros novos e usados no Rio de Janeiro - RJ",
+    "titleTemplate": "Concessionária Simcauto Chevrolet - Carros novos e usados no Rio de Janeiro - RJ",
+    "type": "website"
+  },
+  "Tema Chevrolet": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Theme.tsx",
+    "buttonStyle": {
+      "--border-btn": "1px",
+      "--btn-focus-scale": "0.95",
+      "--btn-text-case": "normal-case",
+      "--rounded-btn": "0.2rem"
+    },
+    "complementaryColors": {
+      "base": {
+        "base-200": "#ffffff",
+        "base-300": "#6e6e6e"
+      }
+    },
+    "font": {
+      "fontFamily": "None"
+    },
+    "mainColors": {
+      "base-100": "#ffffff",
+      "primary": "#000000",
+      "secondary": "#d1ad57",
+      "tertiary": "#d1ad57"
+    }
+  },
+  "Tema Montadora 1": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Theme.tsx",
+    "font": {
+      "fontFamily": "Rubik"
+    },
+    "mainColors": {
+      "base-100": "#d0b4b4",
+      "primary": "#a7b300",
+      "secondary": "#f86d6d",
+      "tertiary": "#511f1f"
+    }
+  },
+  "Tema Volkswagen": {
+    "__resolveType": "deco-sites/leadfy-dealers/sections/Theme.tsx",
+    "buttonStyle": {
+      "--border-btn": "4px",
+      "--btn-focus-scale": "1",
+      "--btn-text-case": "normal-case",
+      "--rounded-btn": "2rem"
+    },
+    "complementaryColors": {
+      "base": {
+        "base-200": "#ffffff",
+        "base-300": "#a1a1a1",
+        "base-content": "#421f1f"
+      }
+    },
+    "font": {
+      "fontFamily": "Inter"
+    },
+    "mainColors": {
+      "base-100": "#f3f5f6",
+      "primary": "#000000",
+      "secondary": "#000000",
+      "tertiary": "#005ec2"
+    }
+  },
+  "everyone": {
+    "__resolveType": "$live/flags/everyone.ts",
+    "routes": [
+      {
+        "handler": {
+          "value": {
+            "__resolveType": "$live/handlers/fresh.ts",
+            "page": {
+              "__resolveType": "home"
+            }
+          }
+        },
+        "pathTemplate": "/"
+      },
+      {
+        "handler": {
+          "value": {
+            "__resolveType": "$live/handlers/fresh.ts",
+            "page": {
+              "__resolveType": "pages-pdp-e27728fd9791"
+            }
+          }
+        },
+        "pathTemplate": "/:idloja/:slug"
+      }
+    ]
+  },
+  "home": {
+    "__resolveType": "$live/pages/LivePage.tsx",
+    "name": "Home",
+    "path": "/",
+    "sections": [
+      {
+        "__resolveType": "deco-sites/std/sections/Analytics.tsx",
+        "googleAnalyticsIds": [],
+        "trackingIds": []
+      },
+      {
+        "__resolveType": "deco-sites/leadfy-dealers/sections/DealerList.tsx",
+        "sections": {
+          "__resolveType": "$live/flags/multivariate.ts",
+          "variants": [
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "ofertasrealvw.com.br"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Volkswagen"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "description": "As melhores ofertas Volks do Brasil",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9016815e-e58d-4b42-89a7-fa0f15a2ed7e",
+                  "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/d2d8bd67-5ffe-4383-9d77-e8db9a28ab9d",
+                  "title": "Conheça a Real Veículos VW",
+                  "titleTemplate": "Ofertas Real Veículos VW",
+                  "type": "website"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+                  "alt": "Logo Real Veículos",
+                  "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9c9a77c5-caca-4081-9bc5-576c21df5e80",
+                  "brandName": "Volkswagen",
+                  "idLoja": "6452",
+                  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a22f2585-ff44-4af2-91ff-1054ba2a16b5",
+                  "seoSection": {
+                    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+                    "noIndexNoFollow": false,
+                    "title": "Conheça a Simcauto Chevrolet",
+                    "titleTemplate": "%s | Deco.cx",
+                    "type": "website"
+                  },
+                  "socialMedias": [
+                    {
+                      "alt": "Facebook Logo",
+                      "href": "https://www.facebook.com/GrupoRealVeiculos",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+                    },
+                    {
+                      "alt": "Instagram Logo",
+                      "href": "https://www.instagram.com/realveiculosvw",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+                    }
+                  ],
+                  "whatsApp": {
+                    "alt": "WhatsApp Logo",
+                    "href": " ",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+                  },
+                  "whatsAppNumber": "+558007070013"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Carousel.tsx",
+                  "images": [
+                    {
+                      "alt": "polo",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/df303351-9dbb-4ae5-969d-36db0dbe552d",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/989b2dc6-a9e8-43e2-8891-64d48a315a1c"
+                    },
+                    {
+                      "action": {
+                        "href": "https://api.whatsapp.com/send/?phone=558007070013",
+                        "label": "whatsapp",
+                        "subTitle": "whatsapp",
+                        "title": "whatsapp"
+                      },
+                      "alt": "tcross",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9cefcd08-bca0-4ad0-aa06-013790189784",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/398aca99-feb3-4b8b-914e-e99406495959"
+                    },
+                    {
+                      "alt": "taos",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/3254a8ac-23bf-4870-bf3c-844c4ca74ab1",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/c9ee58c0-bf71-45fc-9875-d8ce0a3060a5"
+                    }
+                  ],
+                  "interval": 7,
+                  "preload": true
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/RichText.tsx",
+                  "content": [
+                    "<h2 class=\"text-[30px] my-3 louis-bold text-black\" style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><span style=\"font-size: 28pt;\" data-mce-style=\"font-size: 28pt;\">Ofertas <span style=\"color: rgb(0, 161, 225);\" data-mce-style=\"color: rgb(0, 161, 225);\">Especiais<br><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Volkswagen</span> #vale+</span></span></h2>"
+                  ]
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
+                  "banner": {
+                    "altText": "Banner Simcauto",
+                    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/8026ba12-aee0-4669-89f0-d1d37d92175c"
+                  },
+                  "content": {
+                    "subtitle": "Ofertas Exclusivas",
+                    "text": "Seu novo Chevrolet com as melhores condições",
+                    "title": "Bem-vindo à Simcauto Chevrolet"
+                  },
+                  "idLoja": "6452",
+                  "label": "6452 - Ofertas Real Veículos VW",
+                  "phone": "(21) 2173-1500",
+                  "productCard": {
+                    "showPrice": true,
+                    "textButton": "Tenho Interesse",
+                    "textWhatsButton": "Falar pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/539af632-95be-436f-9941-5dda0656f267"
+                  },
+                  "profile": {
+                    "idLoja": "5604",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/4ab272c2-8eab-477a-a426-1d0b7d1e38a0",
+                    "whatsappNumber": "2135596207"
+                  },
+                  "title": "Ofertas Real Veículos VW",
+                  "whatsButton": false
+                },
+                {
+                  "__resolveType": "Footer Real Veículos"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GTM.tsx",
+                  "trackingId": "GTM-KQ6WRN95"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GlobalTags.tsx",
+                  "facebookKey": "pa8zf1acipnxxkcux0reqma9md5an1",
+                  "googleKey": "F_WE4rLshBPEzV8xqyaymsfqhlc1HjSEJ9vt_-4yyYU"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "assinaturareal.com.br"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Volkswagen"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9016815e-e58d-4b42-89a7-fa0f15a2ed7e",
+                  "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/d2d8bd67-5ffe-4383-9d77-e8db9a28ab9d",
+                  "title": "Conheça a Real Veículos VW"
+                },
+                {
+                  "__resolveType": "Header Real Veículos"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Carousel.tsx",
+                  "images": [
+                    {
+                      "alt": "polo track",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/55df7057-0a07-4a00-adc8-936906e7fa6b",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/acb6d598-6ab8-4c1b-8db2-60f012a83d5a"
+                    },
+                    {
+                      "alt": "assinatura",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/3b213024-b583-4b02-86d2-7f47293dbda7",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/69b07b5e-3c32-4ab8-9160-6ee3a76e67ea"
+                    }
+                  ],
+                  "interval": 7,
+                  "preload": true
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/RichText.tsx",
+                  "content": [
+                    "<h2 class=\"text-[30px] my-3 louis-bold text-black\" style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><span style=\"font-size: 28pt;\" data-mce-style=\"font-size: 28pt;\"><span style=\"color: rgb(0, 161, 225);\" data-mce-style=\"color: rgb(0, 161, 225);\"><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">A MELHOR OPÇÃO DE MOBILIDADE</span><br><span style=\"font-size: 18pt; color: rgb(0, 0, 0);\" data-mce-style=\"font-size: 18pt; color: rgb(0, 0, 0);\">Carros por ASSINATURA</span><br><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Confira nossas OFERTAS</span></span></span></h2>"
+                  ]
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
+                  "banner": {
+                    "altText": "Banner Simcauto",
+                    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/8026ba12-aee0-4669-89f0-d1d37d92175c"
+                  },
+                  "content": {
+                    "subtitle": "Ofertas Exclusivas",
+                    "text": "Seu novo Chevrolet com as melhores condições",
+                    "title": "Bem-vindo à Simcauto Chevrolet"
+                  },
+                  "idLoja": "6453",
+                  "label": "6453 - Assinaturas Real Veículos VW",
+                  "phone": "(21) 2173-1500",
+                  "productCard": {
+                    "showPrice": true,
+                    "textButton": "Tenho Interesse",
+                    "textWhatsButton": "Negocie pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/539af632-95be-436f-9941-5dda0656f267"
+                  },
+                  "profile": {
+                    "idLoja": "5604",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/4ab272c2-8eab-477a-a426-1d0b7d1e38a0",
+                    "whatsappNumber": "2135596207"
+                  },
+                  "title": "Assinaturas Real Veículos VW",
+                  "whatsButton": false
+                },
+                {
+                  "__resolveType": "Footer Real Veículos"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "ofertasimcauto.com.br"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Chevrolet"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5f40e7cf-7619-4fc3-ad7a-2158e021f259",
+                  "title": "Conheça a Simcauto Chevrolet"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+                  "alt": "Logo Simcauto",
+                  "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/00c57366-f312-4153-8995-b84ac014edb1",
+                  "brandName": "Chevrolet",
+                  "idLoja": "6454",
+                  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/0dfed1dc-b329-44b7-ae07-29dbb23dfae8",
+                  "seoSection": {
+                    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+                    "noIndexNoFollow": false,
+                    "title": "Conheça a Simcauto Chevrolet",
+                    "titleTemplate": "%s | Deco.cx",
+                    "type": "website"
+                  },
+                  "socialMedias": [
+                    {
+                      "alt": "Facebook Logo",
+                      "href": "https://www.facebook.com/SimcautoChevrolet",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+                    },
+                    {
+                      "alt": "Instagram Logo",
+                      "href": "https://www.instagram.com/simcautochevroletrio",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+                    }
+                  ],
+                  "whatsApp": {
+                    "alt": "WhatsApp Logo",
+                    "href": " ",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+                  },
+                  "whatsAppNumber": "21 35596207"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Carousel.tsx",
+                  "images": [
+                    {
+                      "action": {
+                        "href": "https://wa.me/552135596207?text=Ol%C3%A1%2C+vim+do+site+OFERTAS+SIMCAUTO+CHEVROLET+sobre+as+OFERTAS+DO+SITE",
+                        "label": "whatsapp",
+                        "subTitle": "whatsapp",
+                        "title": "whatsapp 1"
+                      },
+                      "alt": "onix",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/361b4e4b-08d7-4da5-9a66-661f5220b48c",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/ec0b2e68-2b39-46d2-a8f2-c2e7ad69c3c4"
+                    },
+                    {
+                      "action": {
+                        "href": "https://wa.me/552135596207?text=Ol%C3%A1%2C+vim+do+site+OFERTAS+SIMCAUTO+CHEVROLET+sobre+as+OFERTAS+DO+SITE",
+                        "label": "whatsapp",
+                        "subTitle": "whatsapp",
+                        "title": "whatsapp"
+                      },
+                      "alt": "nova montana",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/bcce62c0-286c-440e-857f-892e024a416d",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/07a0b7a9-947c-4530-8911-8b7fbe9a35c9"
+                    },
+                    {
+                      "action": {
+                        "href": "https://wa.me/552135596207?text=Ol%C3%A1%2C+vim+do+site+OFERTAS+SIMCAUTO+CHEVROLET+sobre+as+OFERTAS+DO+SITE",
+                        "label": "whatsapp",
+                        "subTitle": "whatsapp",
+                        "title": "whatsapp"
+                      },
+                      "alt": "tracker",
+                      "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/52e11c0c-654a-4177-ad53-9f7b49acfc13",
+                      "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/d9267692-f9e9-4686-b17e-cfc035fc7a96"
+                    }
+                  ],
+                  "interval": 10,
+                  "preload": true
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/RichText.tsx",
+                  "content": [
+                    "<h2 class=\"text-[44px] my-3 louis-bold text-black\" style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><span style=\"font-size: 30pt;\" data-mce-style=\"font-size: 30pt;\"><strong>Bem-vindo à <br>Simcauto Chevrolet</strong></span></h2><h2 class=\"text-[30px]\" style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><span style=\"font-size: 24pt; color: rgb(158, 118, 38);\" data-mce-style=\"font-size: 24pt; color: rgb(158, 118, 38);\">Ofertas Exclusivas</span></h2><p class=\"text-[20px] louis-bold text-[#1a1b1f] opacity-60\" style=\"text-align: center;\" data-mce-style=\"text-align: center;\">Seu novo Chevrolet com as melhores condições</p>"
+                  ]
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/DealerHome.tsx",
+                  "banner": {
+                    "altText": "Banner Simcauto",
+                    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/8026ba12-aee0-4669-89f0-d1d37d92175c"
+                  },
+                  "content": {
+                    "subtitle": "Ofertas Exclusivas",
+                    "text": "Seu novo Chevrolet com as melhores condições",
+                    "title": "Bem-vindo à Simcauto Chevrolet"
+                  },
+                  "idLoja": "6454",
+                  "label": "6454 - Simcauto",
+                  "phone": "(21) 2173-1500",
+                  "productCard": {
+                    "showPrice": true,
+                    "textButton": "Tenho Interesse",
+                    "textWhatsButton": "Negocie pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/539af632-95be-436f-9941-5dda0656f267"
+                  },
+                  "profile": {
+                    "idLoja": "5604",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1865/4ab272c2-8eab-477a-a426-1d0b7d1e38a0",
+                    "whatsappNumber": "2135596207"
+                  },
+                  "title": "Ofertas Simcauto Chevrolet",
+                  "whatsButton": false
+                },
+                {
+                  "__resolveType": "Footer Simcauto"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GTM.tsx",
+                  "trackingId": "GTM-TJDPM9QG"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GlobalTags.tsx",
+                  "facebookKey": "kjgzl73pbz2yh3ya7hvgdf3jth1dnm"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchAlways.ts"
+              },
+              "value": [
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "pages-pdp-e27728fd9791": {
+    "__resolveType": "$live/pages/LivePage.tsx",
+    "name": "Product Page",
+    "path": "/:idloja/:slug",
+    "sections": [
+      {
+        "__resolveType": "deco-sites/std/sections/Analytics.tsx",
+        "googleAnalyticsIds": [],
+        "trackingIds": []
+      },
+      {
+        "__resolveType": "deco-sites/leadfy-dealers/sections/DealerList.tsx",
+        "sections": {
+          "__resolveType": "$live/flags/multivariate.ts",
+          "variants": [
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "ofertasrealvw.com.br"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Volkswagen"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+                  "alt": "Logo Real Veículos",
+                  "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/9c9a77c5-caca-4081-9bc5-576c21df5e80",
+                  "brandName": "Volkswagen",
+                  "idLoja": "6452",
+                  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a22f2585-ff44-4af2-91ff-1054ba2a16b5",
+                  "seoSection": {
+                    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+                    "noIndexNoFollow": false,
+                    "title": "Conheça a Simcauto Chevrolet",
+                    "titleTemplate": "%s | Deco.cx",
+                    "type": "website"
+                  },
+                  "socialMedias": [
+                    {
+                      "alt": "Facebook Logo",
+                      "href": "https://www.facebook.com/GrupoRealVeiculos",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+                    },
+                    {
+                      "alt": "Instagram Logo",
+                      "href": "https://www.instagram.com/realveiculosvw",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+                    }
+                  ],
+                  "whatsApp": {
+                    "alt": "WhatsApp Logo",
+                    "href": " ",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+                  },
+                  "whatsAppNumber": "+558007070013"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
+                  "page": {
+                    "__resolveType": "deco-sites/leadfy-dealers/loaders/pdp.ts",
+                    "idloja": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "idloja"
+                    },
+                    "slug": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "slug"
+                    }
+                  },
+                  "phone": "(21) 35596202",
+                  "whatsNormalButton": {
+                    "textWhatsButton": "Falar pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5e7d0d03-8c2b-41ce-8c64-95ce3bfdd850"
+                  }
+                },
+                {
+                  "__resolveType": "Footer Real Veículos"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5b0fd48f-0fb4-4981-a801-9517e17001e6",
+                  "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/2ef2250c-093f-4913-af95-981af5a94df0",
+                  "title": "Ofertas volkwagen",
+                  "titleTemplate": "Ofertas VW"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GTM.tsx",
+                  "trackingId": "GTM-KQ6WRN95"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "assinaturareal.com.br"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Volkswagen"
+                },
+                {
+                  "__resolveType": "Header Real Veículos"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
+                  "page": {
+                    "__resolveType": "deco-sites/leadfy-dealers/loaders/pdp.ts",
+                    "idloja": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "idloja"
+                    },
+                    "slug": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "slug"
+                    }
+                  },
+                  "phone": "(21) 35596202",
+                  "whatsNormalButton": {
+                    "textWhatsButton": "Negocie pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5e7d0d03-8c2b-41ce-8c64-95ce3bfdd850"
+                  }
+                },
+                {
+                  "__resolveType": "Footer Real Veículos"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5b0fd48f-0fb4-4981-a801-9517e17001e6",
+                  "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/2ef2250c-093f-4913-af95-981af5a94df0",
+                  "title": "Ofertas volkwagen",
+                  "titleTemplate": "Ofertas VW"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchHost.ts",
+                "includes": "ofertasimcauto"
+              },
+              "value": [
+                {
+                  "__resolveType": "Tema Chevrolet"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/Header.tsx",
+                  "alt": "Logo Simcauto",
+                  "brandLogo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/00c57366-f312-4153-8995-b84ac014edb1",
+                  "brandName": "Chevrolet",
+                  "idLoja": "6454",
+                  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/0dfed1dc-b329-44b7-ae07-29dbb23dfae8",
+                  "seoSection": {
+                    "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/cd6fa28e-2373-417d-a933-b857e13a3951",
+                    "noIndexNoFollow": false,
+                    "title": "Conheça a Simcauto Chevrolet",
+                    "titleTemplate": "%s | Deco.cx",
+                    "type": "website"
+                  },
+                  "socialMedias": [
+                    {
+                      "alt": "Facebook Logo",
+                      "href": "https://www.facebook.com/SimcautoChevrolet",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/40dfadc4-4e8a-4bfb-a938-9e6d4f61281d"
+                    },
+                    {
+                      "alt": "Instagram Logo",
+                      "href": "https://www.instagram.com/simcautochevroletrio",
+                      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/a384e519-6370-468a-bbb2-c7caa466a507"
+                    }
+                  ],
+                  "whatsApp": {
+                    "alt": "WhatsApp Logo",
+                    "href": " ",
+                    "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/18bc749a-6397-4870-be28-a439d41bb84e"
+                  },
+                  "whatsAppNumber": "21 35596207"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/StoresPdp.tsx",
+                  "page": {
+                    "__resolveType": "deco-sites/leadfy-dealers/loaders/pdp.ts",
+                    "idloja": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "idloja"
+                    },
+                    "slug": {
+                      "__resolveType": "deco-sites/std/functions/requestToParam.ts",
+                      "param": "slug"
+                    }
+                  },
+                  "phone": "(21) 35596202",
+                  "whatsNormalButton": {
+                    "textWhatsButton": "Negocie pelo WhatsApp",
+                    "whatsImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/5e7d0d03-8c2b-41ce-8c64-95ce3bfdd850"
+                  }
+                },
+                {
+                  "__resolveType": "Footer Simcauto"
+                },
+                {
+                  "__resolveType": "deco-sites/std/sections/SEO.tsx",
+                  "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/7aa2a9a7-ae07-47ff-87a5-2f9e7dac9562"
+                },
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/GTM.tsx",
+                  "trackingId": "GTM-TJDPM9QG"
+                }
+              ]
+            },
+            {
+              "rule": {
+                "__resolveType": "$live/matchers/MatchAlways.ts"
+              },
+              "value": [
+                {
+                  "__resolveType": "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "site": {
+    "__resolveType": "deco-sites/leadfy-dealers/apps/site.ts",
+    "commerce": {
+      "platform": "other"
+    },
+    "global": [
+      {
+        "__resolveType": "Tema Chevrolet"
+      }
+    ],
+    "routes": [
+      {
+        "__resolveType": "website/loaders/pages.ts"
+      }
+    ],
+    "seo": {
+      "canonical": "https://www.chevrolet.com.br",
+      "description": "Encontre o Chevrolet que combina com você. Confira todos os modelos de carros hatch, sedan, esportivos, picapes, SUVs, conversíveis e muito mais!",
+      "descriptionTemplate": "%s | Deco.cx",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/2643ebda-38f2-4dac-b4b1-18af0276be64",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1953/29494d07-6fff-4ea1-a340-28d15789676e",
+      "title": "Concessionária Simcauto Chevrolet - Carros novos e usados no Rio de Janeiro - RJ",
+      "titleTemplate": "Concessionária Simcauto Chevrolet - Carros novos e usados no Rio de Janeiro - RJ",
+      "type": "website"
+    }
+  }
+}

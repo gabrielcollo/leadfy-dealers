@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "start": "deno task bundle && deno run -A --unstable --watch=static/sw.js,tailwind.css,sections/,functions/,loaders/,actions/,workflows/,accounts/ dev.ts",
+    "start": "deno task bundle && DECO_SITE_NAME=leadfy-dealers deno run -A --unstable --watch=static/sw.js,tailwind.css,sections/,functions/,loaders/,actions/,workflows/,accounts/ dev.ts",
     "component": "deno eval 'import \"deco/scripts/component.ts\"'",
     "check": "deno fmt && deno lint && deno check dev.ts main.ts",
     "build": "deno run -A dev.ts build",
