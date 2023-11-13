@@ -40,7 +40,7 @@ export default function WhatsAppModal(
             "Nome": nome.value,
             "Telefone": telefone.value,
             "Carro": whatsAppModalInformation.value.vehicle || "",
-            "Email": "lead@leadfy.me",
+            "Email": telefone.value + "@leadfy.me",
           },
         },
       ],
