@@ -10,7 +10,7 @@ export const handler: Handlers = {
       "method": "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${Deno.env.get("AIRTABLE_TOKEN")}`,
+        Authorization: `Bearer patwtV3K1GUHeRHqk.eea80f00ad4bbef7fdd3ece660fd4778c8b86fae11ec5d7c7074caf9091147f1`,
       },
       body: req.body,
     };
