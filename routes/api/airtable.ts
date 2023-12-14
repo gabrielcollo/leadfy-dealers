@@ -10,7 +10,7 @@ export const handler: Handlers = {
       "method": "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `patwtV3K1GUHeRHqk.b95a6144860bc0cff0d719184246ac2bc133481ffbd0ae35fdb7bb3d205b0706`,
+        Authorization: `Bearer patwtV3K1GUHeRHqk.b95a6144860bc0cff0d719184246ac2bc133481ffbd0ae35fdb7bb3d205b0706`,
       },
       body: req.body,
     };
