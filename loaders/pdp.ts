@@ -34,9 +34,6 @@ export default async function searchPdp(
       title: json.rss.channel[0].title[0],
       description: json.rss.channel[0].description[0],
       logo: json.rss.channel[0].logo[0],
-      whatsapp:
-        json.rss.channel[0].locations[0].location[0].whatsapps[0].whatsapp[0]
-          .number[0],
     },
     result: vehicles.filter((car: Vehicle) => {
       const titleCar = car["g:title"][0].toLowerCase().replaceAll("-", " ");
@@ -45,7 +42,8 @@ export default async function searchPdp(
         slug.replaceAll("-", " ").replaceAll("|", "/").toLowerCase(),
       );
 
-      return slugCleaned.includes("oferta") && slugCleaned.replaceAll("|", "/").includes(titleCar) &&
+      return slugCleaned.includes("oferta") &&
+        slugCleaned.replaceAll("|", "/").includes(titleCar) &&
         slugCleaned.includes(idCar);
     }),
   };

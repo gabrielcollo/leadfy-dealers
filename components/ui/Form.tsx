@@ -120,13 +120,11 @@ export default function Form(
           {buttonText.value}
         </button>
       </form>
-      {phone && (
-        <WhatsAppNormalButton
-          text={whatsNormalButton.textWhatsButton}
-          image={whatsNormalButton.whatsImage}
-          vehicle={vehicle["g:title"][0].toUpperCase()}
-        />
-      )}
+      <WhatsAppNormalButton
+        text={whatsNormalButton.textWhatsButton}
+        image={whatsNormalButton.whatsImage}
+        vehicle={vehicle["g:title"][0].toUpperCase()}
+      />
     </div>
   );
 }

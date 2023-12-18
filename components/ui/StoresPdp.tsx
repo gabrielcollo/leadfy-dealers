@@ -31,7 +31,7 @@ export default function StoresPdp(
   { page, whatsFloatButton = false, whatsNormalButton }: Props,
 ) {
   if (page) {
-    console.log(page)
+    console.log(page);
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
 
@@ -58,7 +58,6 @@ export default function StoresPdp(
               <Form
                 vehicle={vehicle}
                 idLoja={idLoja}
-                phone={storeDataFromApi.whatsapp}
                 whatsNormalButton={whatsNormalButton}
               />
             </div>

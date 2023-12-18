@@ -32,10 +32,10 @@ export interface Props {
 }
 
 export default function StoresHome(
-  { store, vehicles, storeDataFromApi }: SectionProps<typeof loader>,
+  { store, vehicles }: SectionProps<typeof loader>,
 ) {
   if (store) {
-    const { idLoja, title, whatsButton, productCard } = store;
+    const { idLoja, whatsButton, productCard } = store;
     return (
       <>
         <div>
@@ -74,12 +74,5 @@ export const loader = async (
 
   const vehicles = json.rss.channel[0].item;
 
-  const storeDataFromApi = {
-    logo: json.rss.channel[0].logo[0],
-    whatsapp:
-      json.rss.channel[0].locations[0].location[0].whatsapps?.[0].whatsapp?.[0]
-        .number[0],
-  };
-
-  return { store, vehicles, storeDataFromApi };
+  return { store, vehicles };
 };

@@ -7,7 +7,6 @@ export interface storeDataFromApi {
   title: string;
   description: string;
   logo: string;
-  whatsapp: string;
 }
 
 export interface PdpReturn {
