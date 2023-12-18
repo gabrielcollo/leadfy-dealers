@@ -77,7 +77,7 @@ export const loader = async (
   const storeDataFromApi = {
     logo: json.rss.channel[0].logo[0],
     whatsapp:
-      json.rss.channel[0].locations[0].location[0].whatsapps[0].whatsapp[0]
+      json.rss.channel[0].locations[0].location[0].whatsapps?.[0].whatsapp?.[0]
         .number[0],
   };
 
