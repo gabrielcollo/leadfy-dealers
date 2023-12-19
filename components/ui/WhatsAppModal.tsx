@@ -198,7 +198,7 @@ export default function WhatsAppModal(
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
                     value={telefone.value}
                     onChange={(e) =>
-                      telephone.value = normalizePhoneNumber(
+                      telefone.value = normalizePhoneNumber(
                         (e.target as HTMLInputElement).value,
                       )}
                       //telefone.value = (e.target as HTMLInputElement)?.value}
