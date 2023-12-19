@@ -1,5 +1,7 @@
 import type { Vehicle } from "deco-sites/leadfy-dealers/components/types.ts";
 
+import { normalizePhoneNumber } from "deco-sites/leadfy-dealers/sdk/mask.ts";
+
 import { useSignal } from "@preact/signals";
 
 import { formatPrice } from "deco-sites/leadfy-dealers/sdk/format.ts";
@@ -101,8 +103,10 @@ export default function Form(
           label={"Telefone"}
           placeholder={"Seu Telefone aqui"}
           value={telefone.value}
-          changeState={(value) => {
-            telefone.value = value;
+          onKeyDown={(e) =>{
+            const inputValue = (e.target as HTMLInputElement).value;
+            const numericValue = inputValue.replace(/[\D]/g, '');
+            telefone.value = normalizePhoneNumber(numericValue);
           }}
         />
         <Input
