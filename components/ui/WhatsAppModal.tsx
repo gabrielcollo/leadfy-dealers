@@ -1,5 +1,6 @@
 import { clearWhatsApp } from "deco-sites/leadfy-dealers/sdk/format.ts";
 import { asset } from "$fresh/runtime.ts";
+import { normalizePhoneNumber } from "deco-sites/leadfy-dealers/sdk/mask.ts";
 
 import { useSignal } from "@preact/signals";
 import { useUI } from "deco-sites/leadfy-dealers/sdk/useUI.ts";
@@ -197,7 +198,10 @@ export default function WhatsAppModal(
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
                     value={telefone.value}
                     onChange={(e) =>
-                      telefone.value = (e.target as HTMLInputElement)?.value}
+                      telephone.value = normalizePhoneNumber(
+                        (e.target as HTMLInputElement).value,
+                      )}
+                      //telefone.value = (e.target as HTMLInputElement)?.value}
                   />
                 </span>
               </div>
