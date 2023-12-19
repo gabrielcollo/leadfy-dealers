@@ -103,8 +103,8 @@ export default function Form(
           label={"Telefone"}
           placeholder={"Seu Telefone aqui"}
           value={telefone.value}
-          changeState={(value) =>{
-            const inputValue = value;
+          onChange={(e) =>{
+            const inputValue = (e.target as HTMLInputElement)?.value;
             const numericValue = inputValue.replace(/[\D]/g, '');
             telefone.value = normalizePhoneNumber(numericValue);
           }}
