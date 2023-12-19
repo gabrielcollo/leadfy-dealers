@@ -99,16 +99,26 @@ export default function Form(
             nome.value = value;
           }}
         />
-        <Input
-          label={"Telefone"}
-          placeholder={"Seu Telefone aqui"}
-          value={telefone.value}
-          onChange={(e) =>{
-            const inputValue = (e.target as HTMLInputElement)?.value;
-            const numericValue = inputValue.replace(/[\D]/g, '');
-            telefone.value = normalizePhoneNumber(numericValue);
-          }}
-        />
+        <div class="flex flex-col gap-2">
+          <label for="telefone" class="text-[14px] uppercase tracking-[1px]">
+            Telefone
+          </label>
+          <input
+            type="text"
+            value={telefone.value}
+            name="telefone"
+            id="telefone"
+            placeholder="Seu Telefone aqui"
+            required
+            onChange={(e) =>{
+              const inputValue = (e.target as HTMLInputElement)?.value;
+              const numericValue = inputValue.replace(/[\D]/g, '');
+              telefone.value = normalizePhoneNumber(numericValue);
+            }}
+            class="border-[1px] border-[#cccccc] py-2 px-3 focus-visible:border-[#3898ec] focus-visible:outline-none"
+          />
+        </div>
+        
         <Input
           label={"E-mail"}
           placeholder={"Seu E-mail aqui"}
