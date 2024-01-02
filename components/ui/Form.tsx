@@ -111,15 +111,15 @@ export default function Form(
             placeholder="Seu Telefone aqui"
             maxLength={15}
             required
-            onChange={(e) =>{
+            onChange={(e) => {
               const inputValue = (e.target as HTMLInputElement)?.value;
-              const numericValue = inputValue.replace(/[\D]/g, '');
+              const numericValue = inputValue.replace(/[\D]/g, "");
               telefone.value = normalizePhoneNumber(numericValue);
             }}
             class="border-[1px] border-[#cccccc] py-2 px-3 focus-visible:border-[#3898ec] focus-visible:outline-none"
           />
         </div>
-        
+
         <Input
           label={"E-mail"}
           placeholder={"Seu E-mail aqui"}
