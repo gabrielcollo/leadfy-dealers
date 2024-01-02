@@ -197,15 +197,15 @@ export default function WhatsAppModal(
                     required
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
                     value={telefone.value}
-                    onKeyDown={(e) =>{
+                    onKeyDown={(e) => {
                       const inputValue = (e.target as HTMLInputElement).value;
-                      const numericValue = inputValue.replace(/[\D]/g, '');
+                      const numericValue = inputValue.replace(/[\D]/g, "");
                       telefone.value = normalizePhoneNumber(numericValue);
                     }}
-                      // telefone.value = normalizePhoneNumber(
-                      //   (e.target as HTMLInputElement).value,
-                      // )}
-                      //telefone.value = (e.target as HTMLInputElement)?.value}
+                    // telefone.value = normalizePhoneNumber(
+                    //   (e.target as HTMLInputElement).value,
+                    // )}
+                    //telefone.value = (e.target as HTMLInputElement)?.value}
                   />
                 </span>
               </div>
