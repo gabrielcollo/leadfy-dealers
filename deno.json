@@ -29,7 +29,7 @@
     "deco-sites/leadfy-dealers/": "./",
     "deco-sites/start/": "./",
     "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.22.11/",
-    "$live/": "https://denopkg.com/deco-cx/deco@1.45.5/",
+    "$live/": "https://denopkg.com/deco-cx/deco@1.50.2/",
     "$fresh/": "https://deno.land/x/fresh@1.5.2/",
     "preact": "https://esm.sh/preact@10.18.1",
     "preact/": "https://esm.sh/preact@10.18.1/",
@@ -40,8 +40,8 @@
     "std/": "https://deno.land/std@0.190.0/",
     "xml2js": "https://esm.sh/xml2js@0.6.2",
     "daisyui": "npm:daisyui@3.5.0",
-    "deco/": "https://denopkg.com/deco-cx/deco@1.45.5/",
-    "apps/": "https://denopkg.com/deco-cx/apps@0.19.5/"
+    "deco/": "https://denopkg.com/deco-cx/deco@1.50.2/",
+    "apps/": "https://denopkg.com/deco-cx/apps@0.25.19/"
   },
   "lint": {
     "rules": {
