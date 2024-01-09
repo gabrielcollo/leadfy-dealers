@@ -193,6 +193,7 @@ export default function WhatsAppModal(
                     aria-required="true"
                     placeholder="Telefone"
                     maxLength={15}
+                    minLength={15}
                     title="Insira um telefone válido"
                     required
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
