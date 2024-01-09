@@ -110,6 +110,7 @@ export default function Form(
             id="telefone"
             placeholder="Seu Telefone aqui"
             maxLength={15}
+            minLength={15}
             required
             onChange={(e) => {
               const inputValue = (e.target as HTMLInputElement)?.value;
