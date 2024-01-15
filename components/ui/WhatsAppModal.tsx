@@ -187,7 +187,7 @@ export default function WhatsAppModal(
                 <label for="telefone" class="hidden">Telefone</label>
                 <span class="form-control-wrap">
                   <input
-                    type="tel"
+                    type="text"
                     name="telefone"
                     id="telefone"
                     aria-required="true"
