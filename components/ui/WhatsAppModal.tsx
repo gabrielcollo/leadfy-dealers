@@ -192,8 +192,6 @@ export default function WhatsAppModal(
                     id="telefone"
                     aria-required="true"
                     placeholder="Telefone"
-                    maxLength={15}
-                    minLength={15}
                     title="Insira um telefone válido com 15 dígitos"
                     required
                     pattern="\\d{15}"
