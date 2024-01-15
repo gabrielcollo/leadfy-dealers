@@ -194,7 +194,7 @@ export default function WhatsAppModal(
                     placeholder="Telefone"
                     title="Insira um telefone válido com 15 dígitos"
                     required
-                    pattern="\\d{15}"
+                    pattern="\\d{11}"
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
                     value={telefone.value}
                     onKeyDown={(e) => {
