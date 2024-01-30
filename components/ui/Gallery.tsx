@@ -54,8 +54,6 @@ export function ProductCard(
         {vehicle["g:title"][0].toUpperCase()}
       </h3>
       <span class="text-[16px] text-primary font-semibold pb-2 min-h-[80px]">
-        {vehicle["<ano_fabricacao>/ <ano_modelo>"][0]}
-      <span class="text-[16px] text-primary font-semibold pb-2 min-h-[80px]">
         {vehicle["g:description"][0]}
       </span>
       {productCard.showPrice && (
