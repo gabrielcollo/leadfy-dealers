@@ -36,7 +36,7 @@ export default function StoresPdp(
     const { storeDataFromApi, idLoja } = page;
     
     const images = vehicle["g:additional_image_link"][0] != ""
-      ? [...vehicle["g:image_link"], ...vehicle["g:additional_image_link"]]
+      ? [...vehicle["g:image_link"], ...vehicle["g:additional_image_link"].split(",")[0]]
       : [...vehicle["g:image_link"]];
 
     return (
