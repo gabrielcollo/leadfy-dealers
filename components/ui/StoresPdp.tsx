@@ -40,7 +40,7 @@ export default function StoresPdp(
     ? vehicle["g:additional_image_link"].split(", ")
     : [];
 
-const images = [imageLink, ...additionalImageLinks];
+    const images = [imageLink, ...additionalImageLinks];
     return (
       <>
         <Head>
