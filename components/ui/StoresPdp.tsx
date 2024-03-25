@@ -27,19 +27,27 @@ export interface Props {
   page: PdpReturn;
 }
 
-export default function StoresPdp(
-  { page, whatsFloatButton = false, whatsNormalButton }: Props,
-) {
+export default function StoresPdp({ page, whatsFloatButton = false, whatsNormalButton }: Props) {
   if (page) {
     console.log(page);
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
     
-    const images:Array<string> = [...vehicle["g:image_link"]]
-    const additionalImages:Array<string> = [...vehicle["g:additional_image_link"][0].split(", ")]    
-    additionalImages.forEach((image: string) => {
-      images.push(image)
-    })
+    // Inicializa o array de imagens com a imagem principal
+    const images:Array<string> = [...vehicle["g:image_link"]];
+    // Checa se há imagens adicionais e as trata adequadamente
+    if (vehicle["g:additional_image_link"] && vehicle["g:additional_image_link"][0]) {
+      const additionalImagesStr = vehicle["g:additional_image_link"][0];
+      // Verifica se há múltiplas imagens adicionais
+      if (additionalImagesStr.includes(", ")) {
+        // Divide as imagens adicionais e as adiciona ao array de imagens
+        const additionalImages:Array<string> = additionalImagesStr.split(", ");
+        additionalImages.forEach((image: string) => images.push(image));
+      } else {
+        // Caso contrário, adiciona a única imagem adicional ao array de imagens
+        images.push(additionalImagesStr);
+      }
+    }
     
     return (
       <>
