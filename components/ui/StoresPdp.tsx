@@ -1,11 +1,12 @@
 import type { LoaderReturnType } from "$live/types.ts";
-
+import type { HTML } from "deco-sites/std/components/types.ts";
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
 import WhatsAppFloatButton from "deco-sites/leadfy-dealers/islands/WhatsAppFloatButton.tsx";
+import VehicleDescription from "deco-sites/leadfy-dealers/components/ui/vdp/VehicleDescription.tsx";
 import Image from "apps/website/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
@@ -22,13 +23,16 @@ export interface WhatsNormalButton {
 
 export interface Props {
   whatsNormalButton: WhatsNormalButton;
+  showPriceText?: boolean;
+  priceText?: string;
+  vehicleDescription?: HTML;
   /** @description Show WhatsApp Float Button */
   whatsFloatButton?: boolean;
   page: PdpReturn;
 }
 
 export default function StoresPdp(
-  { page, whatsFloatButton = false, whatsNormalButton }: Props,
+  { page, whatsFloatButton = false, whatsNormalButton, showPriceText, priceText, vehicleDescription }: Props,
 ) {
   if (page) {
     console.log(page);
@@ -54,13 +58,19 @@ export default function StoresPdp(
                 vehicle["g:image_link"].length == 1 && "items-center"
               }`}
             >
-              <GalleryProductPage images={images} />
+            
+            <GalleryProductPage images={images} />
+            <VehicleDescription description={vehicleDescription}/>
+              
             </div>
+
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-6 top-0 self-start">
               <Form
                 vehicle={vehicle}
                 idLoja={idLoja}
                 whatsNormalButton={whatsNormalButton}
+                showPriceText={showPriceText}
+                priceText={priceText}
               />
             </div>
           </div>
