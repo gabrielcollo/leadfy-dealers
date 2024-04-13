@@ -32,6 +32,8 @@ export interface Vehicle {
   "g:availability": string[];
   "g:google_product_category": string[];
   "location_id": string[];
+  "acessorios": string[];
+  "acessorio": string[];
 }
 
 interface Whatsapp {
