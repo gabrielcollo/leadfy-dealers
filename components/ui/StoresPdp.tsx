@@ -46,19 +46,28 @@ export default function StoresPdp(
     vehicleOptionalTitle,
   }: Props,
 ) {
+
   if (page) {
     console.log(page);
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
-
-    const images: Array<string> = [...vehicle["g:image_link"]];
-    const additionalImages: Array<string> = [
-      ...vehicle["g:additional_image_link"][0].split(", "),
-    ];
-    additionalImages.forEach((image: string) => {
-      images.push(image);
-    });
-
+    
+    // Inicializa o array de imagens com a imagem principal
+    const images:Array<string> = [...vehicle["g:image_link"]];
+    // Checa se há imagens adicionais e as trata adequadamente
+    if (vehicle["g:additional_image_link"] && vehicle["g:additional_image_link"][0]) {
+      const additionalImagesStr = vehicle["g:additional_image_link"][0];
+      // Verifica se há múltiplas imagens adicionais
+      if (additionalImagesStr.includes(", ")) {
+        // Divide as imagens adicionais e as adiciona ao array de imagens
+        const additionalImages:Array<string> = additionalImagesStr.split(", ");
+        additionalImages.forEach((image: string) => images.push(image));
+      } else {
+        // Caso contrário, adiciona a única imagem adicional ao array de imagens
+        images.push(additionalImagesStr);
+      }
+    }
+    
     return (
       <>
         <Head>
@@ -177,20 +186,20 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton>
           <Icon
-            class="text-black"
-            size={24}
+            class="text-white"
+            size={26}
             id="ChevronLeft"
-            strokeWidth={3}
+            strokeWidth={5}
           />
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
         <Slider.NextButton>
           <Icon
-            class="text-black"
-            size={24}
+            class="text-white"
+            size={26}
             id="ChevronRight"
-            strokeWidth={3}
+            strokeWidth={5}
           />
         </Slider.NextButton>
       </div>
