@@ -15,7 +15,7 @@ export default function VehicleOptional(
     {
       showVehicleOptional && (
         
-        <div class="w-full mt-5 flex flex-col gap-4 ">
+        <div class="w-full my-5 flex flex-col gap-4 ">
           <h3 class="text-xl font-semibold">{vehicleOptionalTitle}</h3>
           <ul class="w-full grid grid-cols-2 gap-x-6 gap-2 pl-5 sm:grid-cols-3">
           {
