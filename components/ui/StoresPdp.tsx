@@ -89,7 +89,7 @@ export default function StoresPdp(
                   vehicle={vehicle}
                   showVehicleOptional={showVehicleOptional}
                   vehicleOptionalTitle={vehicleOptionalTitle}
-                  
+                  />
                 <VehicleDescription
                   description={vehicleDescription}
                 />
