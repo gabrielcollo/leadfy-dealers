@@ -81,6 +81,7 @@ export default function StoresPdp(
                   showVehicleOptional={showVehicleOptional}
                   vehicleOptionalTitle={vehicleOptionalTitle}
                 />
+
                 <VehicleDescription
                   description={vehicleDescription}
                 />
@@ -102,6 +103,7 @@ export default function StoresPdp(
                   showVehicleOptional={showVehicleOptional}
                   vehicleOptionalTitle={vehicleOptionalTitle}
                 />
+                
                 <VehicleDescription
                   description={vehicleDescription}
                 />
