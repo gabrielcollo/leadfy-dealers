@@ -93,6 +93,10 @@ export default function StoresPdp(
                 <VehicleDescription
                   description={vehicleDescription}
                 />
+
+                <VehicleDescription
+                  description={vehicleDescription}
+                />
               </div>
             </div>
 
@@ -106,13 +110,14 @@ export default function StoresPdp(
               />
 
               <div class="flex flex-col mt-5 sm:hidden">
-                <VehicleDescription
-                  description={vehicleDescription}
-                />
                 <VehicleOptional
                   vehicle={vehicle}
                   showVehicleOptional={showVehicleOptional}
                   vehicleOptionalTitle={vehicleOptionalTitle}
+                />
+                
+                <VehicleDescription
+                  description={vehicleDescription}
                 />
               </div>
             </div>
