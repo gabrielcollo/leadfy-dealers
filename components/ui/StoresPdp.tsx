@@ -1,11 +1,13 @@
 import type { LoaderReturnType } from "$live/types.ts";
-
+import type { HTML } from "deco-sites/std/components/types.ts";
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
 import WhatsAppFloatButton from "deco-sites/leadfy-dealers/islands/WhatsAppFloatButton.tsx";
+import VehicleDescription from "deco-sites/leadfy-dealers/components/ui/vdp/VehicleDescription.tsx";
+import VehicleOptional from "deco-sites/leadfy-dealers/components/ui/vdp/VehicleOptional.tsx";
 import Image from "apps/website/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
@@ -22,12 +24,29 @@ export interface WhatsNormalButton {
 
 export interface Props {
   whatsNormalButton: WhatsNormalButton;
+  showPriceText?: boolean;
+  priceText?: string;
+  vehicleDescription?: HTML;
+  showVehicleOptional?: boolean;
+  vehicleOptionalTitle?: string;
   /** @description Show WhatsApp Float Button */
   whatsFloatButton?: boolean;
   page: PdpReturn;
 }
 
-export default function StoresPdp({ page, whatsFloatButton = false, whatsNormalButton }: Props) {
+export default function StoresPdp(
+  {
+    page,
+    whatsFloatButton = false,
+    whatsNormalButton,
+    showPriceText,
+    priceText,
+    vehicleDescription,
+    showVehicleOptional,
+    vehicleOptionalTitle,
+  }: Props,
+) {
+
   if (page) {
     console.log(page);
     const vehicle = page.result[0];
@@ -62,14 +81,40 @@ export default function StoresPdp({ page, whatsFloatButton = false, whatsNormalB
                 vehicle["g:image_link"].length == 1 && "items-center"
               }`}
             >
-              <GalleryProductPage images={images} />
+              <GalleryProductPage
+                images={images}
+              />
+              <div class="hidden sm:flex sm:flex-col">
+                <VehicleDescription
+                  description={vehicleDescription}
+                />
+                <VehicleOptional
+                  vehicle={vehicle}
+                  showVehicleOptional={showVehicleOptional}
+                  vehicleOptionalTitle={vehicleOptionalTitle}
+                />
+              </div>
             </div>
+
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-6 top-0 self-start">
               <Form
                 vehicle={vehicle}
                 idLoja={idLoja}
                 whatsNormalButton={whatsNormalButton}
+                showPriceText={showPriceText}
+                priceText={priceText}
               />
+
+              <div class="flex flex-col mt-5 sm:hidden">
+                <VehicleDescription
+                  description={vehicleDescription}
+                />
+                <VehicleOptional
+                  vehicle={vehicle}
+                  showVehicleOptional={showVehicleOptional}
+                  vehicleOptionalTitle={vehicleOptionalTitle}
+                />
+              </div>
             </div>
           </div>
         </div>
