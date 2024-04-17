@@ -93,9 +93,7 @@ export default function StoresPdp(
                 <VehicleDescription
                   description={vehicleDescription}
                 />
-
-                <VehicleDescription
-                  description={vehicleDescription}
+                
                 />
               </div>
             </div>
