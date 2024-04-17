@@ -85,13 +85,13 @@ export default function StoresPdp(
                 images={images}
               />
               <div class="hidden sm:flex sm:flex-col">
-                <VehicleDescription
-                  description={vehicleDescription}
-                />
                 <VehicleOptional
                   vehicle={vehicle}
                   showVehicleOptional={showVehicleOptional}
                   vehicleOptionalTitle={vehicleOptionalTitle}
+                  
+                <VehicleDescription
+                  description={vehicleDescription}
                 />
               </div>
             </div>
