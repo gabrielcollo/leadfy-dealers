@@ -57,9 +57,14 @@ export function ProductCard(
         {vehicle["g:description"][0]}
       </span>
       {productCard.showPrice && (
-        <span class="text-[32px] text-secondary font-bold py-2">
-          {formatPrice(Number(vehicle["g:price"][0]))}
-        </span>
+        <div class="flex flex-col py-2">
+          {productCard.showPriceText && (
+            <span class="w-[150px] font-semibold ml-[-10%]">{productCard.priceText}</span>
+          )}
+          <span class="text-[32px] text-secondary font-bold">
+            {formatPrice(Number(vehicle["g:price"][0]))}
+          </span>
+        </div>
       )}
 
       <div class="px-0 sm:px-8">

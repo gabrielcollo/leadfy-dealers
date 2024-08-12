@@ -64,7 +64,7 @@ export default function Header(
           <div class="flex items-center gap-2">
             {socialMedias.map((social) => {
               return (
-                <a href={social.href}>
+                <a href={social.href} target="_blank" rel="noopener noreferrer">
                   <Image
                     src={social.logo}
                     width={40}

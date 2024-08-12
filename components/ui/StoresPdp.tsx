@@ -1,11 +1,13 @@
 import type { LoaderReturnType } from "$live/types.ts";
-
+import type { HTML } from "deco-sites/std/components/types.ts";
 import type { PdpReturn } from "deco-sites/leadfy-dealers/components/types.ts";
 
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 
 import Form from "deco-sites/leadfy-dealers/islands/Form.tsx";
 import WhatsAppFloatButton from "deco-sites/leadfy-dealers/islands/WhatsAppFloatButton.tsx";
+import VehicleDescription from "deco-sites/leadfy-dealers/components/ui/vdp/VehicleDescription.tsx";
+import VehicleOptional from "deco-sites/leadfy-dealers/components/ui/vdp/VehicleOptional.tsx";
 import Image from "apps/website/components/Image.tsx";
 
 import { Head } from "$fresh/runtime.ts";
@@ -22,23 +24,50 @@ export interface WhatsNormalButton {
 
 export interface Props {
   whatsNormalButton: WhatsNormalButton;
+  showPriceText?: boolean;
+  priceText?: string;
+  vehicleDescription?: HTML;
+  showVehicleOptional?: boolean;
+  vehicleOptionalTitle?: string;
   /** @description Show WhatsApp Float Button */
   whatsFloatButton?: boolean;
   page: PdpReturn;
 }
 
 export default function StoresPdp(
-  { page, whatsFloatButton = false, whatsNormalButton }: Props,
+  {
+    page,
+    whatsFloatButton = false,
+    whatsNormalButton,
+    showPriceText,
+    priceText,
+    vehicleDescription,
+    showVehicleOptional,
+    vehicleOptionalTitle,
+  }: Props,
 ) {
+
   if (page) {
     console.log(page);
     const vehicle = page.result[0];
     const { storeDataFromApi, idLoja } = page;
-
-    const images = vehicle["g:additional_image_link"][0] != ""
-      ? [...vehicle["g:image_link"], ...vehicle["g:additional_image_link"]]
-      : [...vehicle["g:image_link"]];
-
+    
+    // Inicializa o array de imagens com a imagem principal
+    const images:Array<string> = [...vehicle["g:image_link"]];
+    // Checa se há imagens adicionais e as trata adequadamente
+    if (vehicle["g:additional_image_link"] && vehicle["g:additional_image_link"][0]) {
+      const additionalImagesStr = vehicle["g:additional_image_link"][0];
+      // Verifica se há múltiplas imagens adicionais
+      if (additionalImagesStr.includes(", ")) {
+        // Divide as imagens adicionais e as adiciona ao array de imagens
+        const additionalImages:Array<string> = additionalImagesStr.split(", ");
+        additionalImages.forEach((image: string) => images.push(image));
+      } else {
+        // Caso contrário, adiciona a única imagem adicional ao array de imagens
+        images.push(additionalImagesStr);
+      }
+    }
+    
     return (
       <>
         <Head>
@@ -52,14 +81,41 @@ export default function StoresPdp(
                 vehicle["g:image_link"].length == 1 && "items-center"
               }`}
             >
-              <GalleryProductPage images={images} />
+              <GalleryProductPage
+                images={images}
+              />
+              <div class="hidden sm:flex sm:flex-col">
+                <VehicleOptional
+                  vehicle={vehicle}
+                  showVehicleOptional={showVehicleOptional}
+                  vehicleOptionalTitle={vehicleOptionalTitle}
+                  />
+                <VehicleDescription
+                  description={vehicleDescription}
+                />
+              </div>
             </div>
+
             <div class="w-full px-5 sm:px-0 sm:w-1/2 sm:max-w-[450px] mx-auto pt-6 top-0 self-start">
               <Form
                 vehicle={vehicle}
                 idLoja={idLoja}
                 whatsNormalButton={whatsNormalButton}
+                showPriceText={showPriceText}
+                priceText={priceText}
               />
+
+              <div class="flex flex-col mt-5 sm:hidden">
+                <VehicleOptional
+                  vehicle={vehicle}
+                  showVehicleOptional={showVehicleOptional}
+                  vehicleOptionalTitle={vehicleOptionalTitle}
+                />
+                
+                <VehicleDescription
+                  description={vehicleDescription}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -131,20 +187,20 @@ function Buttons() {
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton>
           <Icon
-            class="text-black"
-            size={24}
+            class="text-white"
+            size={26}
             id="ChevronLeft"
-            strokeWidth={3}
+            strokeWidth={5}
           />
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
         <Slider.NextButton>
           <Icon
-            class="text-black"
-            size={24}
+            class="text-white"
+            size={26}
             id="ChevronRight"
-            strokeWidth={3}
+            strokeWidth={5}
           />
         </Slider.NextButton>
       </div>

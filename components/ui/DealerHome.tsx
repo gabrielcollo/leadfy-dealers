@@ -13,6 +13,8 @@ import { Parser } from "xml2js";
 
 export interface ProductCard {
   showPrice: boolean;
+  showPriceText?: boolean;
+  priceText?: string;
   textButton: string;
   textWhatsButton: string;
   whatsImage?: LiveImage;
