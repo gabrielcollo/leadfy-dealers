@@ -34,6 +34,12 @@ export default function WhatsAppModal(
   const ref = useRef<HTMLDivElement>(null);
 
   function saveLead() {
+    if (telefone.value.length < 15) {
+      alert("Insira um telefone válido");
+      loading.value =  false;
+      return null
+    }
+
     const data = {
       "records": [
         {
@@ -192,21 +198,16 @@ export default function WhatsAppModal(
                     id="telefone"
                     aria-required="true"
                     placeholder="Telefone"
-                    maxLength={15}
                     minLength={15}
+                    maxLength={15}
                     title="Insira um telefone válido com DDD"
                     required
                     class="w-full px-4 py-2 bg-[#e7ffe7] border border-[#e7ffe7] text-base"
                     value={telefone.value}
-                    onKeyDown={(e) => {
-                      const inputValue = (e.target as HTMLInputElement).value;
-                      const numericValue = inputValue.replace(/[\D]/g, "");
-                      telefone.value = normalizePhoneNumber(numericValue);
+                    onChange={(e) => {
+                      telefone.value = normalizePhoneNumber((e.target as HTMLInputElement).value);
+                      (e.target as HTMLInputElement).value = telefone.value
                     }}
-                    // telefone.value = normalizePhoneNumber(
-                    //   (e.target as HTMLInputElement).value,
-                    // )}
-                    //telefone.value = (e.target as HTMLInputElement)?.value}
                   />
                 </span>
               </div>

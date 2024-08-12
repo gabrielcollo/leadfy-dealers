@@ -3,19 +3,19 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$0 from "./loaders/pdp.ts";
-import * as $$$$$$0 from "./sections/DealerHome.tsx";
-import * as $$$$$$1 from "./sections/DealerList.tsx";
-import * as $$$$$$2 from "./sections/Banner.tsx";
-import * as $$$$$$3 from "./sections/SectionList.tsx";
-import * as $$$$$$4 from "./sections/LeadfyLogo.tsx";
-import * as $$$$$$5 from "./sections/GTM.tsx";
-import * as $$$$$$6 from "./sections/RichText.tsx";
-import * as $$$$$$7 from "./sections/Theme.tsx";
-import * as $$$$$$8 from "./sections/Footer.tsx";
-import * as $$$$$$9 from "./sections/GlobalTags.tsx";
-import * as $$$$$$10 from "./sections/Header.tsx";
+import * as $$$$$$0 from "./sections/Banner.tsx";
+import * as $$$$$$1 from "./sections/Carousel.tsx";
+import * as $$$$$$2 from "./sections/DealerHome.tsx";
+import * as $$$$$$3 from "./sections/DealerList.tsx";
+import * as $$$$$$4 from "./sections/Footer.tsx";
+import * as $$$$$$5 from "./sections/GlobalTags.tsx";
+import * as $$$$$$6 from "./sections/GTM.tsx";
+import * as $$$$$$7 from "./sections/Header.tsx";
+import * as $$$$$$8 from "./sections/LeadfyLogo.tsx";
+import * as $$$$$$9 from "./sections/RichText.tsx";
+import * as $$$$$$10 from "./sections/SectionList.tsx";
 import * as $$$$$$11 from "./sections/StoresPdp.tsx";
-import * as $$$$$$12 from "./sections/Carousel.tsx";
+import * as $$$$$$12 from "./sections/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -24,19 +24,19 @@ const manifest = {
     "deco-sites/leadfy-dealers/loaders/pdp.ts": $$$0,
   },
   "sections": {
-    "deco-sites/leadfy-dealers/sections/Banner.tsx": $$$$$$2,
-    "deco-sites/leadfy-dealers/sections/Carousel.tsx": $$$$$$12,
-    "deco-sites/leadfy-dealers/sections/DealerHome.tsx": $$$$$$0,
-    "deco-sites/leadfy-dealers/sections/DealerList.tsx": $$$$$$1,
-    "deco-sites/leadfy-dealers/sections/Footer.tsx": $$$$$$8,
-    "deco-sites/leadfy-dealers/sections/GlobalTags.tsx": $$$$$$9,
-    "deco-sites/leadfy-dealers/sections/GTM.tsx": $$$$$$5,
-    "deco-sites/leadfy-dealers/sections/Header.tsx": $$$$$$10,
-    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$4,
-    "deco-sites/leadfy-dealers/sections/RichText.tsx": $$$$$$6,
-    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$3,
+    "deco-sites/leadfy-dealers/sections/Banner.tsx": $$$$$$0,
+    "deco-sites/leadfy-dealers/sections/Carousel.tsx": $$$$$$1,
+    "deco-sites/leadfy-dealers/sections/DealerHome.tsx": $$$$$$2,
+    "deco-sites/leadfy-dealers/sections/DealerList.tsx": $$$$$$3,
+    "deco-sites/leadfy-dealers/sections/Footer.tsx": $$$$$$4,
+    "deco-sites/leadfy-dealers/sections/GlobalTags.tsx": $$$$$$5,
+    "deco-sites/leadfy-dealers/sections/GTM.tsx": $$$$$$6,
+    "deco-sites/leadfy-dealers/sections/Header.tsx": $$$$$$7,
+    "deco-sites/leadfy-dealers/sections/LeadfyLogo.tsx": $$$$$$8,
+    "deco-sites/leadfy-dealers/sections/RichText.tsx": $$$$$$9,
+    "deco-sites/leadfy-dealers/sections/SectionList.tsx": $$$$$$10,
     "deco-sites/leadfy-dealers/sections/StoresPdp.tsx": $$$$$$11,
-    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$7,
+    "deco-sites/leadfy-dealers/sections/Theme.tsx": $$$$$$12,
   },
   "apps": {
     "deco-sites/leadfy-dealers/apps/decohub.ts": $$$$$$$$$$$0,

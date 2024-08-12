@@ -31,6 +31,11 @@ export default function Form(
   }
 
   function saveLead() {
+    if (telefone.value.length < 15) {
+      alert("Insira um telefone válido");
+      return null
+    }
+
     buttonText.value = "Enviando...";
     const data = {
       "records": [
@@ -104,18 +109,17 @@ export default function Form(
             Telefone
           </label>
           <input
-            type="text"
+            type="tel"
             value={telefone.value}
             name="telefone"
             id="telefone"
             placeholder="Seu Telefone aqui"
-            maxLength={15}
             minLength={15}
+            maxLength={15}
             required
             onChange={(e) => {
-              const inputValue = (e.target as HTMLInputElement)?.value;
-              const numericValue = inputValue.replace(/[\D]/g, "");
-              telefone.value = normalizePhoneNumber(numericValue);
+              telefone.value = normalizePhoneNumber((e.target as HTMLInputElement).value);
+              (e.target as HTMLInputElement).value = telefone.value
             }}
             class="border-[1px] border-[#cccccc] py-2 px-3 focus-visible:border-[#3898ec] focus-visible:outline-none"
           />

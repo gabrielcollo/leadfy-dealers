@@ -1,10 +1,7 @@
 export const normalizePhoneNumber = (value: string | undefined) => {
-  if (!value) return "";
-
-  const numericValue = value.replace(/[\D]/g, "");
-
-  return numericValue
-    .replace(/(\d{2})(\d)/, "($1) $2")
-    .replace(/(\d{5})(\d)/, "$1-$2")
-    .replace(/(-\d{4})(\d+?)/, "$1");
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
 };
