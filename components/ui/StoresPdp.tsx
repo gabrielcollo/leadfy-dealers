@@ -25,7 +25,7 @@ export interface WhatsNormalButton {
 
 export interface Props {
   whatsNormalButton: WhatsNormalButton;
-  showPrice: boolean;
+  showPrice?: boolean;
   showPriceText?: boolean;
   priceText?: string;
   vehicleDescription?: HTML;
